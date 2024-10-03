@@ -1,0 +1,288 @@
+/* Media Query for Mobile Devices */
+@media (max-width: 580px) {
+	.texttt-white img{
+	width:100%;
+}
+	.navbar-brand img {
+width: 50% !important;
+    margin-left: 10px;
+	}
+	 
+footer .foo-bottom p {
+    padding-top: 20px;
+    font-size: 12px;
+    padding-bottom: 16px;
+}
+    .oasis-stats {
+        width: 90vw;
+        margin: 0 2vw;
+        margin-top: -50px !important;
+    }
+
+    .oasis-stats h3 {
+        font-size: 14px;
+    }
+
+    .oasis-stats p {
+        font-size: 9px;
+        color: #fff !important;
+    }
+
+    .oasis-form .form-footer h4 {
+        font-size: 20px;
+    }
+
+    .oasis-form .form-footer p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .oasis-treatcard {
+        min-height: 220px;
+        margin: 10px 0px;
+    }
+
+    .oasis-treatcard img {
+        width: 50%;
+        padding-bottom: 15px;
+    }
+
+    .oasis-treatcard h3 {
+     font-size: 15px;
+        padding-top: 0;
+    }
+
+
+
+
+
+
+
+
+
+    .oasisss-stats {
+        width: 90vw;
+        margin: 0 2vw;
+        margin-top: -50px !important;
+    }
+
+    .oasisss-stats h3 {
+        font-size: 24px;
+    }
+
+    .oasisss-stats p {
+        font-size: 14px;
+    }
+
+    .oasisss-form .form-footer h4 {
+        font-size: 20px;
+    }
+
+    .oasisss-form .form-footer p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .oasisss-treatcard {
+        min-height: 205px;
+        margin: 10px 0px;
+    }
+
+    .oasisss-treatcard img {
+        width: 50%;
+        padding-bottom: 15px;
+    }
+
+    .oasisss-treatcard h3 {
+     font-size: 15px;
+        padding-top: 0;
+    }
+	
+	
+	
+	
+	
+    .carousel-wrap {
+        width: 90%;
+    }
+
+    .owl-nav i {
+        font-size: 15px;
+    }
+
+    .owl-nav .owl-prev {
+        left: -40px;
+    }
+
+    .owl-nav .owl-next {
+        right: -40px;
+    }
+
+    .doc-card .text-block {
+        padding: 5px;
+        left: 5px;
+        bottom: 50px;
+    }
+
+    .doc-card .text-block h3 {
+        font-size: 12px;
+        margin-bottom: 0.2rem;
+    }
+
+    .doc-card .text-block p {
+        font-size: 8px;
+        margin: 0;
+    }
+
+    .our-experts .item {
+        min-height: 0px;
+    }
+
+    .our-experts .item .card-content h4 {
+        font-size: 15px;
+    }
+
+    .our-experts .item .card-content p {
+        font-size: 12px;
+    }
+	
+
+    .google-reviews .item {
+        min-height:260px;
+    }
+
+    .google-reviews .item .review-content h3 {
+        font-size: 14px;
+    }
+
+    .google-reviews .item .review-content p {
+        font-size: 12px;
+    }
+
+    .panel .back {
+        top: -8px;
+    }
+
+    .panel .back .oasis-treatcard p {
+        font-size: 10px;
+    }
+	
+	
+    .panel .back .oasisss-treatcard p {
+        font-size: 10px;
+    }
+
+    footer .loogo-text p {
+        text-align: center;
+    }
+
+    footer .foo-bottom {
+        flex-direction: column-reverse;
+    }
+
+    footer .foo-bottom p {
+        padding-top: 20px;
+    }
+
+    .float-bottom {
+        position: fixed;
+        bottom: -11px;
+        z-index: 99;
+        width: 100%;
+       /* background: #F58941;*/
+       /* padding: 0px;*/
+        text-align: center;
+        display: flex !important;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (max-width: 440px){
+    .oasis-stats h3 {
+        font-size: 11px;
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    .oasis-stats {
+        width: 90vw;
+        margin: 0 2vw;
+        margin-top: -35px;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .oasis-stats {
+        margin: 0 0;
+        margin-top: -40px;
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .hero-banner {
+        background-image: url(../img/Spondylytis-Banner.jpg);
+background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 59px 0 34px 0;
+    margin-top: 90px;   
+    }
+    .oasis-startjour {
+        background-color: transparent;
+        padding: 0;
+    }
+	
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+    .hero-banner {
+        background-image: url(../img/Spondylytis-Banner.jpg);
+   background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+ padding: 30px 0 170px;
+    margin-top: 90px;
+    }
+    .oasis-startjour {
+        background-color: transparent;
+        padding: 0;
+    }
+}
+ 
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+.hero-banner {
+    background-image: url(../img/Spondylytis-Banner.jpg);
+background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      padding: 50px 0 45px;
+    margin-top: 90px;
+} 
+ .oasis-startjour {
+        background-color: transparent;
+        padding: 0;
+    }
+ }
+ 
+ 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+}
+
+
+.mb-3 {
+    margin-bottom: 0.3rem !important;
+}
+.mb-4 {
+    margin-bottom: 0.8rem !important;
+}

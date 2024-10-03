@@ -1,0 +1,38 @@
+#pricing-section .border-primary{
+    border-color: #672658 !important;
+}
+#pricing-section .text-primary{
+    color: #672658 !important;
+}
+#pricing-section .btn-primary{
+    background-color: #672658 !important;
+    border: none;
+}
+#pricing-section .list-group-item span{
+    font-size: 12px;
+}
+#pricing-section .list-group-item .price-extra{
+    font-weight: 700;
+    color: #672658;
+}
+#pricing-section .display-custom-7{
+    font-weight: 700;
+    font-size: 24px;
+    color: #672658;
+}
+#pricing-section .display-custom-8{
+    font-weight: 700;
+    font-size: 18px;
+    color: #672658;
+}
+#pricing-section .card{
+    height: auto;
+}
+
+.custom-card-padding{
+    padding: 20px 15px !important;
+}
+
+.custom-li-height li{
+    height: 45px;
+}

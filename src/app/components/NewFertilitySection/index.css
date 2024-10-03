@@ -1,0 +1,100 @@
+/* General styles for cards, tabs, and text */
+#f-section .tab-content .card {
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  /* margin-top: 10px; */
+  border: 1px solid #cecece;
+  cursor: pointer;
+}
+
+#f-section .tab-content .card:hover  {
+  background-color: #007DAB;
+}
+
+#f-section .tab-content .card:hover .card-title,
+#f-section .tab-content .card:hover .card-text  {
+  color: #fff;
+}
+
+#f-section .nav-link {
+  font-weight: bold;
+  color: #007DAB;
+  border: none;
+}
+
+#f-section .nav-tabs {
+  border: none !important;
+  padding: 0; /* Ensure no padding cuts off content */
+  white-space: nowrap; /* Keep tabs in a single line for scrolling */
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+#f-section .nav-tabs::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+}
+
+#f-section .nav-item {
+  flex: 0 0 auto; /* Prevent nav items from shrinking */
+}
+
+#f-section .nav-link.active {
+  color: #007DAB;
+  text-decoration: none;
+  border-bottom: 2px solid #007DAB;
+}
+
+#f-section .card-text {
+  color: #111;
+  font-size: 13px;
+}
+
+#f-section .card-title {
+  color: #111;
+  font-size: 18px;
+}
+
+#f-section .icon-placeholder {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.tab-pane-active {
+  background-color: #def4fc;
+  padding: 20px; /* Add padding if you want space around the content */
+  border-radius: 5px; /* Optional, for rounded corners */
+}
+
+/* Custom styles for mobile view */
+@media (max-width: 767px) {
+  .mobile-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+  }
+
+  .mobile-row .col-3 {
+    max-width: 30%; /* Adjust the width of the image container */
+    flex: 0 0 30%; /* Ensures the image container doesn't exceed this width */
+  }
+
+  .mobile-row .col-9 {
+    max-width: 70%; /* Adjust the width of the content container */
+    flex: 0 0 70%; /* Ensures the content container takes up the rest */
+  }
+
+  .mobile-row img {
+    max-width: 100%; /* Ensure the image scales within its container */
+  }
+
+  #f-section .tab-content {
+    padding: 10px 0 0 0;
+    margin: 10px 0 0 0; /* Remove any margin that might cut off the first tab content */
+  }
+}

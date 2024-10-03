@@ -1,0 +1,22 @@
+.book-appoinment-link{
+    background-color: #6f3161;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px !important;
+    font-size: 14px;
+}
+
+.doctor-slider{
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.doctor-slider img{
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
