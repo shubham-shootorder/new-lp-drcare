@@ -11,21 +11,23 @@ const TrustedIVFClinic = ({ term, masterRow, root, center, service }) => {
         <div className="d-none d-md-none d-lg-block">
           {/* <h2 className="heading-text" data-aos="zoom-in">Most Trusted {term.toUpperCase()} Clinic in {masterRow.center_name}</h2> */}
           <h2 className="heading-text mb-3" style={{marginBottom: "10px"}} data-aos="zoom-in">
-            Most Trusted IVF Clinic in {" "}
+            {/* Most Trusted IVF Clinic in {" "}
             {center?.center_name
               .split("-")
               .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")}
+              .join(" ")} */}
+              Trusted Clinic
           </h2>
         </div>
         <div className="hedy d-block d-md-none noth moth">
           {/* <h2 className="heading-text" data-aos="zoom-in">Most Trusted {term.toUpperCase()} Clinic<br /> in {masterRow.center_name}</h2> */}
           <h2 className="heading-text mb-3" style={{marginBottom: "10px"}} data-aos="zoom-in">
-            Most Trusted IVF Clinic in {" "}
+            {/* Most Trusted IVF Clinic in {" "}
             {center?.center_name
               .split("-")
               .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")}
+              .join(" ")} */}
+              Trusted Clinic
           </h2>
         </div>
 

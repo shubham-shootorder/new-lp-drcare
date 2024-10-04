@@ -46,22 +46,23 @@ const HeroSection = ({
                 >
                   <div>
                     <h1 >
-                      Best {service ? formatServiceName(service) : "IVF"} Clinic
-                      in{" "}
-                      {center?.center_name_heading
+                      {/* Best {service ? formatServiceName(service) : "IVF"} Clinic
+                      in{" "} */}
+                      Natural Psoriasis Care<br/> with Homeopathy
+                      {/* {center?.center_name_heading
                         .split("-")
                         .map(
                           (word) => word.charAt(0).toUpperCase() + word.slice(1)
                         )
-                        .join(" ")}
+                        .join(" ")} */}
                     </h1>
-                    <h2 style={{ width: "50%",color:"black" }}>
+                    {/* <h2 style={{ width: "50%",color:"black" }}>
                       {!querySubTitle ? (
                         <>{center?.hero_title}</>
                       ) : (
                         <>{querySubTitle} is inviting you to Oasis Fertility</>
                       )}
-                    </h2>
+                    </h2> */}
                   </div>
                   <div className="col-md-7" style={{ position: "relative" }}>
                     <Image
@@ -158,13 +159,13 @@ const HeroSection = ({
               >
                 <div className="col-3">
                   <h3>
-                    <div data-from="0" data-to="100000">
-                      1,00,000
+                    <div data-from="0" data-to="33">
+                      33
                     </div>
                     +
                   </h3>
                   <p>
-                    Healthy <br /> Babies
+                    Clinics 
                   </p>
                 </div>
                 <div className="col-3">
@@ -173,35 +174,34 @@ const HeroSection = ({
                   </div>
                   <div className="hedy d-block d-md-none noth moth">
                     <h3>
-                      <div data-from="0" data-to="69">
-                        69
+                      <div data-from="0" data-to="44">
+                        44
                       </div>
-                      %IVF
+                      Lakhs 
                     </h3>
                     <p>
-                      Success Rate
-                      <br /> Across India
+                     Patients
                     </p>
                   </div>
                 </div>
                 <div className="col-3">
                   <h3>
-                    <div data-from="0" data-to="1000">
-                      1000
+                    <div data-from="0" data-to="300">
+                        300
                     </div>
-                    +Cases
+                    +
                   </h3>
                   <p>
-                    MicroTESE <br /> solving Male Infertility
+                    Doctors
                   </p>
                 </div>
                 <div className="col-3">
                   <h3>
-                    <div data-from="0" data-to="32">
-                      32 Centres
+                    <div data-from="0" data-to="20">
+                     20 Years
                     </div>
                   </h3>
-                  <p>Across India</p>
+                  <p>Experience</p>
                 </div>
               </div>
             </div>

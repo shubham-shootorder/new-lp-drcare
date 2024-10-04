@@ -93,7 +93,7 @@ export default function Page({ params }) {
       {/* <Pricing center={filteredCity} /> */}
       <Carousel center={filteredCity} />
       {/* <SpecialisedFertility /> */}
-      <BestDoctors center={filteredCity} filteredTestimonials={filteredTestimonials} />
+      {/* <BestDoctors center={filteredCity} filteredTestimonials={filteredTestimonials} /> */}
       <Review center={filteredCity} filteredReview={filteredReview} />
       <TrustedIVFClinic center={filteredCity} />
       <AwardSection />

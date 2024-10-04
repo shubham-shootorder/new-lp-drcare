@@ -6,12 +6,13 @@ const IVFSpecialists = ({ service }) => {
     <section className="section-heading-so so-fix sec-bg1">
       <div className="container">
         <h2 className="heading-text mb-3" data-aos="zoom-in">
-          Best {service ? service.toUpperCase() : "IVF"} Specialists in India
+          {/* Best {service ? service.toUpperCase() : "IVF"} Specialists in India */}
+          DR. A M Reddy
         </h2>
 
         <div className="row mt-4">
           <div className="col-md-3"></div>
-          <div className="col-md-3 col-6">
+          <div className="col-md-12 col-12 d-flex justify-content-center tw-align-middle">
             <div className="doc-card mob" data-aos="zoom-in">
               <Image
                 loading="lazy"
@@ -30,7 +31,7 @@ const IVFSpecialists = ({ service }) => {
               </div>
             </div>
           </div>
-          <div className="col-md-3 col-6">
+          {/* <div className="col-md-3 col-6">
             <div className="doc-card mob" data-aos="zoom-in">
               <Image
                 loading="lazy"
@@ -48,7 +49,7 @@ const IVFSpecialists = ({ service }) => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="col-md-3"></div>
         </div>
 

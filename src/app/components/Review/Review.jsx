@@ -82,20 +82,24 @@ const Review = ({
         <div className="d-none d-md-none d-lg-block">
           <h2 className="heading-text" data-aos="zoom-in">
             {/* Best Reviewed {term.toUpperCase()} Clinic in {masterRow.center_name && masterRow.center_name.charAt(0).toUpperCase() + masterRow.center_name.slice(1)} */}
-            Best Reviewed {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
+            {/* Best Reviewed {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
             {center?.center_name
               .split("-")
               .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")}
+              .join(" ")} */}
+              Hear from what our
+              patients say.
           </h2>
         </div>
         <div className="hedy d-block d-md-none noth moth">
           <h2 className="heading-text" data-aos="zoom-in">
-            Best Reviewed {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
+            {/* Best Reviewed {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
             {center?.center_name
               .split("-")
               .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")}
+              .join(" ")} */}
+              Hear from what our
+              patients say.
           </h2>
         </div>
 
