@@ -96,7 +96,7 @@ export default function Page({ params }) {
       {/* <BestDoctors center={filteredCity} filteredTestimonials={filteredTestimonials} /> */}
       <Review center={filteredCity} filteredReview={filteredReview} />
       <TrustedIVFClinic center={filteredCity} />
-      <AwardSection />
+      {/* <AwardSection /> */}
       <ParentHoodSection center={filteredCity} />
       <FAQsSection />
       <FloatingButton center={filteredCity} />

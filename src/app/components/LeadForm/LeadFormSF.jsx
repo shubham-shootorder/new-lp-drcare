@@ -399,7 +399,7 @@ const LeadFormSF = ({
                   onChange={handleTermsChange}
                 />
                 <label className="form-check-label" htmlFor="exampleCheck1">
-                  I consent Oasis Fertility to contact me
+                  I consent Dr Care to contact me
                 </label>
               </div>
             </center>

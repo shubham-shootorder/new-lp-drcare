@@ -27,8 +27,8 @@ const ParentHoodSection = ({ center, referal, refId, testlp = false }) => {
                   Parenthood Dreams. Fulfilled and Delivered.
                 </h2>
                 <p style={{ marginBottom: "16px" }}>
-                  Overcome your fertility challenges effortlessly with our
-                  top-tier fertility experts and personalized treatment plans
+                  Overcome your challenges effortlessly with our
+                  top-tier  experts and personalized treatment plans
                   that suit best for you.
                 </p>
                 <a onClick={handleShow} className="btn">
