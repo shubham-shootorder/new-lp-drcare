@@ -3,8 +3,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
     // read route params
 
     return {
-        title: "About Us - Oasis India",
-        description: "Oasis Fertility is a comprehensive healthcare provider with specific attention to infertility treatments. Oasis is a ‘one-stop’ single-day care clinic where consultation, investigation and treatment are taken care of during the course of a single day. We also take immense pride in our strict adherence to standards and quality."
+        title: "About Us ",
+        description: "Dr Care is a comprehensive healthcare provider with specific attention to infertility treatments. Oasis is a ‘one-stop’ single-day care clinic where consultation, investigation and treatment are taken care of during the course of a single day. We also take immense pride in our strict adherence to standards and quality."
     }
 }
 

@@ -45,8 +45,8 @@ export async function generateMetadata({ params, searchParams }, parent) {
   // read route params
   const { city } = params;
   const capitalizedCity = city.charAt(0).toUpperCase() + city.slice(1);
-  const pageTitle = `Oasis ${capitalizedCity} | Top IVF Clinic in ${capitalizedCity}`;
-  const pageDescription = `Best IVF clinic in ${capitalizedCity} offering top fertility treatments and services. Highest IVF success rate, affordable IVF cost & 1,00,000+ happy couples.`;
+  const pageTitle = `Dr Care ${capitalizedCity} | Top Clinic in ${capitalizedCity}`;
+  const pageDescription = `Best clinic in ${capitalizedCity} offering top treatments and services. Highest success rate, affordable cost & 1,00,000+ happy couples.`;
 
   return {
     title: pageTitle,

@@ -15,8 +15,8 @@ export async function generateStaticParams() {
   export async function generateMetadata({ params, searchParams }, parent) {
     // read route params
 
-    const pageTitle = `Affiliate | Oasis Fertility`;
-    const pageDescription = `Oasis Fertility has been recognised as one of the best IVF clinics in your city. Our team is formed by some of the best IVF specialists using latest technology procedures which ensure that our success rates are amongst the highest`;
+    const pageTitle = `Dr Care`;
+    const pageDescription = `Dr Care has been recognised as one of the best clinics in your city. Our team is formed by some of the best IVF specialists using latest technology procedures which ensure that our success rates are amongst the highest`;
    
     return {
       title: pageTitle,
