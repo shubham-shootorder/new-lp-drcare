@@ -3,13 +3,14 @@ const master = [
     "id": "1",
     "center_name": "hyderabad",
     "center_name_heading": "Hyderabad",
-    "additional_content": "Avail Our Special Offer",
-    "title": "Valid From 25th July&nbsp;Till&nbsp;27th&nbsp;July",
-    "hero_title": "Your Journey to Parenthood Starts Here",
+    "additional_content": "",
+    "title": "",
+    "hero_title": "",
     "location": "Hyderabad",
     "phone": "tel:+917825850105",
     "our_center": "hyderabad, Hyderabad",
-    "status": "1"
+    "status": "1",
+    "backgroundImage":"/img/web-bannerrr.jpg"
   },
   {
     "id": "2",

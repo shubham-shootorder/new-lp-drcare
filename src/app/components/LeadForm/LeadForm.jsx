@@ -30,7 +30,6 @@ const LeadForm = ({
   const [termsAccepted, setTermsAccepted] = useState(true);
   const [ageOptions, setAgeOptions] = useState([]);
 
-
   const [mobile, setMobile] = useState("+91");
   const mobileInputRef = useRef(null);
 
@@ -51,7 +50,10 @@ const LeadForm = ({
       if (cursorPosition < 3) {
         mobileInputRef.current.setSelectionRange(3, 3);
       } else {
-        mobileInputRef.current.setSelectionRange(cursorPosition, cursorPosition);
+        mobileInputRef.current.setSelectionRange(
+          cursorPosition,
+          cursorPosition
+        );
       }
     }, 0);
   };
@@ -59,7 +61,7 @@ const LeadForm = ({
   const handleKeyDown = (e) => {
     const cursorPosition = mobileInputRef.current.selectionStart;
     // Disable backspace if cursor is at the start of the input
-    if (cursorPosition <= 3 && e.key === 'Backspace') {
+    if (cursorPosition <= 3 && e.key === "Backspace") {
       e.preventDefault();
     }
   };
@@ -110,9 +112,8 @@ const LeadForm = ({
   };
 
   const stripPrefix = (number) => {
-    return number.replace(/^\+91/, '');
+    return number.replace(/^\+91/, "");
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -175,7 +176,7 @@ const LeadForm = ({
     const selectYourBranch = centerName;
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'userProvidedData',
+      event: "userProvidedData",
       phone_number: mobile,
     });
 
@@ -244,7 +245,7 @@ const LeadForm = ({
 
   return (
     <>
-      <div className="col-md-4 oasis-startjour frm" >
+      <div className="col-md-4 oasis-startjour frm">
         <h1 className="heading-text pb-2 d-md-none d-block" data-aos="zoom-in">
           {/* Affordable {service ? service.toUpperCase() : "IVF"} Cost */}
           Free Consultation
@@ -277,22 +278,20 @@ const LeadForm = ({
               />
             </div>
             <div className="mb-3">
-
-            <input
-            placeholder="Mobile Number"
-            type="text"
-            className="form-control"
-            id="mobile"
-            name="mobile"
-            minLength="13"
-            maxLength="13"
-            value={mobile}
-            onChange={handleMobileChange}
-            onKeyDown={handleKeyDown}
-            ref={mobileInputRef}
-            required
-          />
-
+              <input
+                placeholder="Mobile Number"
+                type="text"
+                className="form-control"
+                id="mobile"
+                name="mobile"
+                minLength="13"
+                maxLength="13"
+                value={mobile}
+                onChange={handleMobileChange}
+                onKeyDown={handleKeyDown}
+                ref={mobileInputRef}
+                required
+              />
             </div>
 
             <div className="mb-3">
@@ -398,12 +397,12 @@ const LeadForm = ({
             </>
           )}
 
-          <div className="form-footer text-center">
+          {/* <div className="form-footer text-center">
             <p className="avail-emi">
               Avail 0% interest on <b>EMI</b>
             </p>
             <p>All Procedures | No Upper Limit</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
@@ -411,4 +410,3 @@ const LeadForm = ({
 };
 
 export default LeadForm;
-

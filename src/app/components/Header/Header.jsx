@@ -7,7 +7,7 @@ const Header = ({ center }) => {
   return (
     <>
       <div className="header">
-        <NotificationBar center={center} />
+        {/* <NotificationBar center={center} /> */}
         <header>
           <nav className="navbar">
             <div className="container align-items-center">

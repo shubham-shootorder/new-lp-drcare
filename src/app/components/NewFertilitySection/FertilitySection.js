@@ -18,8 +18,8 @@ function CardContent({ imageSrc, title, desc }) {
   return (
     <div className="card mobile-card-p">
       <div className="row g-0 align-items-center fertility-card-content">
-        <div className="col-12 col-md-4">
-          <div className="icon-placeholder mx-auto treatment-img-card">
+        <div className="">
+          {/* <div className="icon-placeholder mx-auto treatment-img-card">
             <Image
               src={imageSrc || defaultImage}
               alt={title}
@@ -27,9 +27,9 @@ function CardContent({ imageSrc, title, desc }) {
               height={200}
               width={300}
             />
-          </div>
+          </div> */}
         </div>
-        <div className="col-12 col-md-8">
+        <div className="col-12 col-md-12">
           <div className="card-body">
             <p className="card-title avail-emi text-center text-md-start">
               {title}

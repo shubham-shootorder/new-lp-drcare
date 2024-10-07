@@ -3,9 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import StatisticBar from "./StatisticBar";
-import oa_state from "@/state";
-import axios from "axios";
-import centerCity from "@/center-city";
 import LeadForm from "../LeadForm/LeadForm";
 import "./FreeBanner.css";
 import Free from "../../../../public/img/Free-01.png";
@@ -33,7 +30,19 @@ const HeroSection = ({
 }) => {
   return (
     <>
-      <section className="hero-banner">
+      <section
+        className="hero-banner"
+        style={{
+          backgroundImage: `url(${center?.backgroundImage})`, // Dynamically set background image
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          position: 'relative',
+          zIndex: '1',
+          // Use !important to override CSS classes
+
+        }}
+      >
         <div className="container">
           <div className="row align-items-start">
             {/* Hero Heading */}
@@ -45,24 +54,7 @@ const HeroSection = ({
                   style={{ height: "400px" }}
                 >
                   <div>
-                    <h1 >
-                      {/* Best {service ? formatServiceName(service) : "IVF"} Clinic
-                      in{" "} */}
-                      Natural Psoriasis Care<br/> with Homeopathy
-                      {/* {center?.center_name_heading
-                        .split("-")
-                        .map(
-                          (word) => word.charAt(0).toUpperCase() + word.slice(1)
-                        )
-                        .join(" ")} */}
-                    </h1>
-                    {/* <h2 style={{ width: "50%",color:"black" }}>
-                      {!querySubTitle ? (
-                        <>{center?.hero_title}</>
-                      ) : (
-                        <>{querySubTitle} is inviting you to Oasis Fertility</>
-                      )}
-                    </h2> */}
+                    <h1>Natural Psoriasis Care<br/> with Homeopathy</h1>
                   </div>
                   <div className="col-md-7" style={{ position: "relative" }}>
                     <Image
@@ -72,24 +64,12 @@ const HeroSection = ({
                       width={300}
                       style={{ position: "relative", left: "0px", top: "30px" }}
                     />
-                    {/* <h3>{center?.additional_content}</h3>
-                    <h4>{center?.title?.toUpperCase()}</h4> */}
-                    {/* <div className="box_free_out">
-                      <div className="box_free">
-                        <span className="txt_free">
-                          <span>FREE</span>
-                          <span className="text-free-span">Consultation | Ultrasound | Registration</span>
-                         </span>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
               </div>
             </div>
-            <div
-              className="col-12 d-md-none d-block"
-              style={{ padding: "0px" }}
-            >
+
+            <div className="col-12 d-md-none d-block" style={{ padding: "0px" }}>
               <div className="col-md-12 d-md-none d-block hero-header home mob-hero-bg">
                 <Image
                   src="/img/mob-banner-so-min.webp"
@@ -101,55 +81,39 @@ const HeroSection = ({
                   priority={true}
                   style={{ zIndex: "-1" }}
                 />
-                <div className="d-flex flex-column" style={{justifyContent: 'space-between', height: "310px"}}>
-
-                <div>
-                  <h1>
-                    Best {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
-                    {center?.center_name_heading
-                      .split("-")
-                      .map(
-                        (word) => word.charAt(0).toUpperCase() + word.slice(1)
-                      )
-                      .join(" ")}
-                  </h1>
-                  {/* <h2>{center?.hero_title}</h2> */}
-                  <h2>
-                    {!querySubTitle ? (
-                      <>{center?.hero_title}</>
-                    ) : (
-                      <>{querySubTitle} is inviting you to Oasis Fertility</>
-                    )}
-                  </h2>
+                <div className="d-flex flex-column" style={{ justifyContent: 'space-between', height: "310px" }}>
+                  <div>
+                    <h1>
+                      Best {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
+                      {center?.center_name_heading
+                        .split("-")
+                        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                        .join(" ")}
+                    </h1>
+                    <h2>
+                      {!querySubTitle ? (
+                        <>{center?.hero_title}</>
+                      ) : (
+                        <>{querySubTitle} is inviting you to Oasis Fertility</>
+                      )}
+                    </h2>
+                  </div>
+                  <div style={{ textAlign: "center", marginTop: "0" }}>
+                    <Link href={`tel:9437751812`}>
+                      <Image
+                        src={Free}
+                        alt="test"
+                        loading="lazy"
+                        height={90}
+                        width={0}
+                        priority={false}
+                      />
+                    </Link>
+                  </div>
                 </div>
-                <div
-                  style={{
-                    textAlign: "center",
-                    marginTop: "0",
-                  }}
-                >
-                  <Link href={`tel:9437751812`}>
-                    <Image
-                      src={Free}
-                      alt="test"
-                      loading="lazy"
-                      height={90}
-                      width={0}
-                      priority={false}
-                    />
-                  </Link>
-                </div>
-                </div>
-
               </div>
-
-              {/* <Image
-                src={`/img/mob-banner-so-min.webp`}
-                alt="mobilebanner"
-                width={500}
-                height={300}
-              /> */}
             </div>
+
             {/* Hero Bottom center bar */}
             <div className="col-md-12 d-md-none d-block">
               <div
@@ -158,74 +122,43 @@ const HeroSection = ({
                 style={{ margin: "0 auto" }}
               >
                 <div className="col-3">
-                  <h3>
-                    <div data-from="0" data-to="33">
-                      33
-                    </div>
-                    +
-                  </h3>
-                  <p>
-                    Clinics 
-                  </p>
+                  <h3>33+</h3>
+                  <p>Clinics</p>
                 </div>
                 <div className="col-3">
-                  <div className="d-none d-md-none d-lg-block">
-                    <p>Success Rate Across India</p>
-                  </div>
                   <div className="hedy d-block d-md-none noth moth">
-                    <h3>
-                      <div data-from="0" data-to="44">
-                        44
-                      </div>
-                      Lakhs 
-                    </h3>
-                    <p>
-                     Patients
-                    </p>
+                    <h3>44 Lakhs</h3>
+                    <p>Patients</p>
                   </div>
                 </div>
                 <div className="col-3">
-                  <h3>
-                    <div data-from="0" data-to="300">
-                        300
-                    </div>
-                    +
-                  </h3>
-                  <p>
-                    Doctors
-                  </p>
+                  <h3>300+</h3>
+                  <p>Doctors</p>
                 </div>
                 <div className="col-3">
-                  <h3>
-                    <div data-from="0" data-to="20">
-                     20 Years
-                    </div>
-                  </h3>
+                  <h3>20 Years</h3>
                   <p>Experience</p>
                 </div>
               </div>
             </div>
+
             {/* Hero section form */}
             {testlp ? (
-              <>
-                <LeadFormSF
-                  service={service}
-                  phoneNumber={center?.phone}
-                  centerName={center?.center_name}
-                  referal={referal}
-                  refId={refId}
-                />
-              </>
+              <LeadFormSF
+                service={service}
+                phoneNumber={center?.phone}
+                centerName={center?.center_name}
+                referal={referal}
+                refId={refId}
+              />
             ) : (
-              <>
-                <LeadForm
-                  service={service}
-                  phoneNumber={center?.phone}
-                  centerName={center?.center_name}
-                  referal={referal}
-                  refId={refId}
-                />
-              </>
+              <LeadForm
+                service={service}
+                phoneNumber={center?.phone}
+                centerName={center?.center_name}
+                referal={referal}
+                refId={refId}
+              />
             )}
           </div>
         </div>

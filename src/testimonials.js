@@ -1441,67 +1441,67 @@ const testimonials = [
   },
   {
     "id": "161",
-    "name": "Ramya",
+    "name": "Shiva Yadav",
     "age": "25",
-    "testimonial": "We are extremely happy with the treatment provided by Dr. Durga Rao. Thanks a lot for making us realize our dream after many years.",
+    "testimonial": "I was suffering from psoriasis since last 8 years , but i had consulted positive homeopathy in 2020 . Now am feeling better and good and Dr chaithanyaa madam gave positive motivation and good medicine to me .",
     "rating": "5",
-    "location": "banjara hills",
+    "location": "Hyderabad",
     "master_id": "1"
   },
   {
     "id": "162",
-    "name": "Uma",
+    "name": "Swapna reddy",
     "age": "27",
-    "testimonial": "Thanks to Dr. Avanthi and the entire team. We had 3 IVF failures and had lost hope. But doctor gave us the confidence and helped us with PGT test that helped us become parents.",
+    "testimonial": "This is a wonderful service for people who are currently without Medical Insurance. The doctor was very friendly and listened to my condition thoroughly with explanation to the treatment and appropriate prescription.",
     "rating": "5",
-    "location": "gachibowli",
+    "location": "Hyderabad",
     "master_id": "1"
   },
   {
     "id": "163",
-    "name": "Rahul",
+    "name": "Aanand G",
     "age": "28",
-    "testimonial": "Our heartfelt thanks to Oasis Fertility, For making our dream come true. Dr. sai Manasa was very caring and always willing to clarify our doubts. Thanks a ton.",
+    "testimonial": "My wife Rajitha under going treatment in Dr. Care for Orthritis from last 11 months. She got relief from the pain during the course of treatment. Let us observe after stopping treatment. As of of now its very good.",
     "rating": "5",
-    "location": "dilshuknagar",
+    "location": "Hyderabad",
     "master_id": "1"
   },
-  {
-    "id": "164",
-    "name": "Arya",
-    "age": "30",
-    "testimonial": "Our thanks to Dr. Parinaaz for her excellent care and guidance. We came here with no hope but now we became parents in the first IVF cycle. Thanks again!",
-    "rating": "5",
-    "location": "secunderabad",
-    "master_id": "1"
-  },
-  {
-    "id": "165",
-    "name": "Ishan",
-    "age": "29",
-    "testimonial": "My sincere thanks to Dr. Varalakshmi and her team. After repeated IVF failures, we conceived after 7 years and all credit goes to the doctor for her expertise and care. ",
-    "rating": "5",
-    "location": "miyapur",
-    "master_id": "1"
-  },
-  {
-    "id": "166",
-    "name": "Hardik",
-    "age": "29",
-    "testimonial": "We are extremely happy with the treatment provided by Dr. Meera. Thanks a lot for making us realize our dream after many years.",
-    "rating": "5",
-    "location": "kompally",
-    "master_id": "1"
-  },
-  {
-    "id": "167",
-    "name": "Imaan",
-    "age": "36",
-    "testimonial": "Thanks to Dr. Durga Rao and the entire team. We had 3 IVF failures and had lost hope. But doctor gave us the confidence and helped us with PGT test that helped us become parents.",
-    "rating": "5",
-    "location": "uppal",
-    "master_id": "1"
-  },
+  // {
+  //   "id": "164",
+  //   "name": "Swapna reddy",
+  //   "age": "30",
+  //   "testimonial": "Our thanks to Dr. Parinaaz for her excellent care and guidance. We came here with no hope but now we became parents in the first IVF cycle. Thanks again!",
+  //   "rating": "5",
+  //   "location": "secunderabad",
+  //   "master_id": "1"
+  // },
+  // {
+  //   "id": "165",
+  //   "name": "Ishan",
+  //   "age": "29",
+  //   "testimonial": "My sincere thanks to Dr. Varalakshmi and her team. After repeated IVF failures, we conceived after 7 years and all credit goes to the doctor for her expertise and care. ",
+  //   "rating": "5",
+  //   "location": "miyapur",
+  //   "master_id": "1"
+  // },
+  // {
+  //   "id": "166",
+  //   "name": "Hardik",
+  //   "age": "29",
+  //   "testimonial": "We are extremely happy with the treatment provided by Dr. Meera. Thanks a lot for making us realize our dream after many years.",
+  //   "rating": "5",
+  //   "location": "kompally",
+  //   "master_id": "1"
+  // },
+  // {
+  //   "id": "167",
+  //   "name": "Imaan",
+  //   "age": "36",
+  //   "testimonial": "Thanks to Dr. Durga Rao and the entire team. We had 3 IVF failures and had lost hope. But doctor gave us the confidence and helped us with PGT test that helped us become parents.",
+  //   "rating": "5",
+  //   "location": "uppal",
+  //   "master_id": "1"
+  // },
   {
     "id": "168",
     "name": "Ravi",

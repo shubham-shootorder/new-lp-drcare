@@ -393,12 +393,12 @@ const ModalForm = ({
               </p>
             </>
           )}
-          <div className="form-footer text-center">
+          {/* <div className="form-footer text-center">
             <p className="avail-emi">
               Avail 0% interest on <b>EMI</b>
             </p>
             <p>All Procedures | No Upper Limit</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

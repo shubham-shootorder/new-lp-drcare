@@ -55,7 +55,7 @@ const ThankyouComponent = () => {
             </center>
             <p className="text-center text-black">
               {" "}
-              You’ll soon receive a call from Oasis Fertility
+              You’ll soon receive a call from Dr Care
               <Image
                 src={`/img/verified.svg`}
                 alt="verified"
@@ -147,7 +147,7 @@ const ThankyouComponent = () => {
               <div className="title-strippp" />{" "}
             </center>
             <h5 className="dtnn">
-              © 2024 Oasis Fertility. All rights reserved.{" "}
+              © 2024 Dr Care. All rights reserved.{" "}
               <a
                 href="https://oasisindia.in/privacy-policy/"
                 target="_blank"

@@ -1,7 +1,10 @@
 import React from "react";
-import Practo from "../../../../public/img/practo.svg"
-import GoogleSvg from "../../../../public/img/google.svg"
-import Pulse from "../../../../public/img/pulse.svg"
+import Google from "../../../../public/img/google.png"
+import facebook from "../../../../public/img/facebook.png"
+import Justdial from "../../../../public/img/Justdail.png"
+import lybrate from "../../../../public/img/lybrate.png"
+import practo from "../../../../public/img/practo.png"
+
 import Image from "next/image";
 
 const TrustedIVFClinic = ({ term, masterRow, root, center, service }) => {
@@ -32,24 +35,38 @@ const TrustedIVFClinic = ({ term, masterRow, root, center, service }) => {
         </div>
 
         <div className="row justify-content-center pt-1 pb-1">
-          <div className="col-4 p-0">
+          <div className="col-2 p-0">
             <Image
-              src={Practo}
-              alt="practo"
-              className="w-100 lazy-load"
-            />
-          </div>
-          <div className="col-4 p-0">
-            <Image
-              src={GoogleSvg}
+              src={Google}
               alt="google"
               className="w-100 lazy-load"
             />
           </div>
-          <div className="col-4 p-0">
+          <div className="col-2 p-0">
             <Image
-              src={Pulse}
-              alt="pulse"
+              src={facebook}
+              alt="facebook"
+              className="w-100 lazy-load"
+            />
+          </div>
+          <div className="col-2 p-0">
+            <Image
+              src={Justdial}
+              alt="Justdial"
+              className="w-100 lazy-load"
+            />
+          </div>
+          <div className="col-2 p-0">
+            <Image
+              src={lybrate}
+              alt="lybrate"
+              className="w-100 lazy-load"
+            />
+          </div>
+          <div className="col-2 p-0">
+            <Image
+              src={practo}
+              alt="practo"
               className="w-100 lazy-load"
             />
           </div>
