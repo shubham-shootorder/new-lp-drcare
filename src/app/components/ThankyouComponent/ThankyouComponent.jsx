@@ -149,7 +149,7 @@ const ThankyouComponent = () => {
             <h5 className="dtnn">
               © 2024 Dr Care. All rights reserved.{" "}
               <a
-                href="https://oasisindia.in/privacy-policy/"
+                href="https://drcarehomeopathy.com/privacy-policy/"
                 target="_blank"
                 style={{ textDecoration: "none", color: "#F58941" }}
               >

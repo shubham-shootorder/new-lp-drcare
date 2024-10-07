@@ -97,7 +97,7 @@ export default function Page({ params }) {
       <Review center={filteredCity} filteredReview={filteredReview} />
       <TrustedIVFClinic center={filteredCity} />
       {/* <AwardSection /> */}
-      <ParentHoodSection center={filteredCity} />
+      {/* <ParentHoodSection center={filteredCity} /> */}
       <FAQsSection />
       <FloatingButton center={filteredCity} />
       <FloatBottom center={filteredCity} />

@@ -54,16 +54,16 @@ const HeroSection = ({
                   style={{ height: "400px" }}
                 >
                   <div>
-                    <h1>Natural Psoriasis Care<br/> with Homeopathy</h1>
+                    <h1>Diabetes Relief Through <br/>Homeopathy Solutions</h1>
                   </div>
                   <div className="col-md-7" style={{ position: "relative" }}>
-                    <Image
+                    {/* <Image
                       src={Free}
                       alt="test"
                       height={0}
                       width={300}
                       style={{ position: "relative", left: "0px", top: "30px" }}
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>

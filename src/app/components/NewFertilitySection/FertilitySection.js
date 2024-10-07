@@ -18,18 +18,20 @@ function CardContent({ imageSrc, title, desc }) {
   return (
     <div className="card mobile-card-p">
       <div className="row g-0 align-items-center fertility-card-content">
-        <div className="">
-          {/* <div className="icon-placeholder mx-auto treatment-img-card">
-            <Image
-              src={imageSrc || defaultImage}
-              alt={title}
-              className="img-fluid rounded"
-              height={200}
-              width={300}
-            />
-          </div> */}
-        </div>
-        <div className="col-12 col-md-12">
+        {imageSrc && (
+          <div className="col-12 col-md-4">
+            <div className="icon-placeholder mx-auto treatment-img-card">
+              <Image
+                src={imageSrc || defaultImage}
+                alt={title}
+                className="img-fluid rounded"
+                height={200}
+                width={300}
+              />
+            </div>
+          </div>
+        )}
+        <div className={`col-12 ${imageSrc ? "col-md-8" : "col-md-12"}`}>
           <div className="card-body">
             <p className="card-title avail-emi text-center text-md-start">
               {title}
@@ -89,7 +91,7 @@ function FertilitySection({ center }) {
         >
           <Nav.Item>
             <Nav.Link eventKey="infertility-testing">
-              Infertility Testing
+              Diabetes Mellitus
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
@@ -118,7 +120,7 @@ function FertilitySection({ center }) {
             <div className="row container justify-content-center g-4 mx-auto">
               <div className="col-12 col-md-12">
                 <CardContent
-                  imageSrc={"/img/Infertility_Testing/Infertility_Workup.jpg"}
+                  imageSrc={"/img/diabetes-1.jpg"}
                   title={"What is Diabetes Mellitus?"}
                   desc={
                     "The word “Diabetes mellitus” means honey urine or madhumeha in sanskrit. It was so-called as it was observed that this urine use to attract ants. It is not a new disease but an ancient one but believed to be affecting only the affluent class. Often referred s blood sugar by lay man, diabetes is a metabolic disorder causing increased sugar or glucose level in the blood due to either insufficiency of internal secretion hormone or the unresponsiveness of the cells to both. "
@@ -163,7 +165,7 @@ function FertilitySection({ center }) {
             <div className="row container justify-content-center g-4 mx-auto">
               <div className="col-12 col-md-6 ">
                 <CardContent
-                  imageSrc={"/img/Treatments/Infertility_Treatments/OITI.png"}
+                  imageSrc={""}
                   title={"Type 1"}
                   desc={
                     "diabetes dependent diabetes Glucose metabolism and utilization is the prime responsibility of hormone secreted by the “beta cells” of Pancreas. In type 1 diabetes, the beta cells are lost leading to non secretion of hormone. It is mainly considered as an auto immune hereditary condition and affects an individual at an early age, as early as in childhood."
@@ -173,7 +175,7 @@ function FertilitySection({ center }) {
               <div className="col-12 col-md-6 ">
                 <CardContent
                   imageSrc={
-                    "/img/Treatments/Infertility_Treatments/IUI – Intrauterine Insemination.png"
+                    ""
                   }
                   title={"Type 2"}
                   desc={
@@ -184,7 +186,7 @@ function FertilitySection({ center }) {
               <div className="col-12 col-md-6 ">
                 <CardContent
                   imageSrc={
-                    "/img/Treatments/Infertility_Treatments/IVF - Invitro Fertilization.png"
+                    ""
                   }
                   title={"Type 3"}
                   desc={
@@ -195,7 +197,7 @@ function FertilitySection({ center }) {
               <div className="col-12 col-md-6 ">
                 <CardContent
                   imageSrc={
-                    "/img/Treatments/Infertility_Treatments/ICSI - Intra Cytoplasmic Sperm Injection.png"
+                    ""
                   }
                   title={"Type 4"}
                   desc={
@@ -270,7 +272,7 @@ function FertilitySection({ center }) {
               <div className="col-12 col-md-12 ">
                 <CardContent
                   imageSrc={
-                    "/img/Treatments/Advanced_Treatments/DNA fragmentation index (DFI) .png"
+                    ""
                   }
                   title={"The classical symptoms of diabetes are"}
                   desc={
@@ -359,7 +361,7 @@ function FertilitySection({ center }) {
               <div className="col-12 col-md-6 ">
                 <CardContent
                   imageSrc={
-                    "/img/Fertility_Preservations/Egg_and_Sperm_Freezing.jpg"
+                    ""
                   }
                   title={"Egg and Sperm Freezing"}
                   desc={
@@ -370,7 +372,7 @@ function FertilitySection({ center }) {
               <div className="col-12 col-md-6 ">
                 <CardContent
                   imageSrc={
-                    "/img/Fertility_Preservations/Freezing_Vitrification.jpg"
+                    ""
                   }
                   title={"Freezing/Vitrification"}
                   desc={
@@ -387,7 +389,7 @@ function FertilitySection({ center }) {
             <div className="row container justify-content-center g-4 mx-auto">
               <div className="col-12 col-md-6 ">
                 <CardContent
-                  imageSrc={"/img/Donor_Program/Donor_Sperm.jpg"}
+                  imageSrc={""}
                   title={"Donor Sperm"}
                   desc={
                     "Donor sperm offers a best option for couples struggling with infertility due to low sperm count or any other structural abnormalities in the sperm. In such cases, good quality donor sperm are used for egg fertilization."
@@ -396,7 +398,7 @@ function FertilitySection({ center }) {
               </div>
               <div className="col-12 col-md-6 ">
                 <CardContent
-                  imageSrc={"/img/Donor_Program/Donor_Egg.jpg"}
+                  imageSrc={""}
                   title={"Donor Egg"}
                   desc={
                     "In women, struggling with low egg quality or poor ovarian reserve due to age or hormonal issues, using donor eggs is a good alternative. Healthy donor eggs are collected from external egg donors and used."
