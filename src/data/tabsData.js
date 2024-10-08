@@ -116,7 +116,7 @@ export const tabsData = {
   psoriasis: {
     url: "psoriasis",
     eventKey: "psoriasis-overview",
-    title: "Homeopathy Treatment for Back Pain",
+    title: "Homeopathy Treatment for Psoriasis",
 
     tabs: [
       {
@@ -126,7 +126,27 @@ export const tabsData = {
           {
             imageSrc: "/img/psoriasis-sub.jpg",
             title: "Homeopathy Treatments For Psoriasis",
-            desc: "Best Homeopathy Treatment for Psoriasis in Hyderabad, India. Our team of skilled homeopathy doctors has wide expertise in the treatment of psoriasis disorder. They are well versed in the advanced homeopathy treatment modalities to cater evidence-based psoriasis treatment to the patient. The homeopathic treatment for psoriasis is completely patient-centric keeping in view providing holistic treatment and homeopathy medicine without any complications.At Dr care Homeopathy, Homeopathy doctors are highly skilled and experienced in handling critical conditions of psoriasis including",
+            desc: (
+              <>
+                Best Homeopathy Treatment for Psoriasis in Hyderabad, India. Our
+                team of skilled homeopathy doctors has wide expertise in the
+                treatment of psoriasis disorder. They are well versed in the
+                advanced homeopathy treatment modalities to cater evidence-based
+                psoriasis treatment to the patient. The homeopathic treatment
+                for psoriasis is completely patient-centric keeping in view
+                providing holistic treatment and homeopathy medicine without any
+                complications.At Dr care Homeopathy, Homeopathy doctors are
+                highly skilled and experienced in handling critical conditions
+                of psoriasis including,
+                <ul>
+                  <li>Plaque Psoriasis</li>
+                  <li>Palmoplantar</li>
+                  <li>Inverse psoriasis</li>
+                  <li>Pustular psoriasis</li>
+                  <li>Guttate psoriasis</li>
+                </ul>
+              </>
+            ),
           },
           // Additional content
         ],
@@ -138,47 +158,138 @@ export const tabsData = {
           {
             imageSrc: "",
             title: "Plaque Psoriasis",
-            desc: "",
+            desc: (
+              <>
+                <ul>
+                  <li>The most common type of Psoriasis</li>
+                  <li>
+                    Appears as raised red patches covered with white scales on
+                    the skin
+                  </li>
+                  <li>Develops in a symmetrical pattern</li>
+                  <li>
+                    Appears in areas like the scalp, trunk, limbs, elbows, and
+                    knees
+                  </li>
+                </ul>
+              </>
+            ),
           },
           {
             imageSrc: "",
-            title: "Palmoplantar",
-            desc: "",
+            title: "Guttate Psoriasis",
+            desc: (
+              <>
+                <ul>
+                  <li>Mostly appears in children and young adults</li>
+                  <li>Looks like small red spots</li>
+                  <li>Develops on limbs and torso</li>
+                  <li>An upper respiratory infection mostly triggers it.</li>
+                </ul>
+              </>
+            ),
           },
           {
             imageSrc: "",
-            title: "Inverse psoriasis",
-            desc: "",
+            title: "Pustular Psoriasis",
+            desc: (
+              <>
+                <ul>
+                  <li>More common in adults</li>
+                  <li>Forms white blisters filled with pus</li>
+                  <li>
+                    Can be seen in red or violet colors depending on skin tone
+                  </li>
+                  <li>
+                    Appears in smaller areas of the body like hands, feet, etc.
+                  </li>
+                </ul>
+              </>
+            ),
           },
           {
             imageSrc: "",
-            title: "Pustular psoriasis",
-            desc: "",
+            title: "Inverse Psoriasis",
+            desc: (
+              <>
+                <ul>
+                  <li>Affects the areas of skin folds</li>
+                  <li>Also called Hidden Psoriasis</li>
+                  <li>Causes red patches in the folds of the skin</li>
+                  <li>Sweat and excess rubbing worsens it.</li>
+                </ul>
+              </>
+            ),
           },
           {
             imageSrc: "",
-            title: "Guttate psoriasis",
-            desc: "",
+            title: "Palmoplantar Psoriasis",
+            desc: (
+              <>
+                <ul>
+                  <li>
+                    Palmoplantar Psoriasis is mainly effects the palms and soles
+                    of the feet
+                  </li>
+                  <li>It causes patches of scaly, flaky, discolored skin.</li>
+                </ul>
+              </>
+            ),
+          },
+          {
+            imageSrc: "",
+            title: "Scalp Psoriasis",
+            desc: (
+              <>
+                <ul>
+                  <li>
+                    Scalp psoriasis is a skin condition characterised by red,
+                    thickened, well-demarcated patches or plaques with overlying
+                    silvery-white scales
+                  </li>
+                </ul>
+              </>
+            ),
           },
           // Additional content
         ],
       },
       {
         eventKey: "advanced-treatments",
-        title: "Symptoms",
+        title: "Causes & Symptoms",
         content: [
           {
             imageSrc: "",
-            title: "The classical symptoms of diabetes are",
+            title: "Psoriasis Causes",
             desc: (
               <>
-                Dr Care Homeopathy Hospital provides the best homeopathy
-                treatment for Psoriasis skin disorder. Our homeopathic
-                dermatologists examine the skin, hair, and scalp with advanced
-                tools called Woodlamps and 3D skin analyzer. Wood lamp is the
-                best tool to examine and analyze the skin’s deep layers,
-                identify the irregularities in the skin pigmentation, and
-                accurately detect all stages of Psoriasis.
+                <ul>
+                  <li>
+                    Immune System- white blood cells attacking the skin cells
+                  </li>
+                  <li>Genetics- Inherited genes likely to cause Psoriasis</li>
+                  <li>Medicines</li>
+                  <li>Stress</li>
+                  <li>Injury of any type on the skin</li>
+                </ul>
+              </>
+            ),
+          },
+          {
+            imageSrc: "",
+            title: "Psoriasis Symptoms",
+            desc: (
+              <>
+                <ul>
+                  <li>
+                    Visible inflamed skin patches are seen in red/brown/purple
+                    color based on skin-tone
+                  </li>
+                  <li> whitish/grayish scales on the patches of skin</li>
+                  <li>dry skin cracking and bleeding</li>
+                  <li> soreness around the patch area</li>
+                  <li>itching and burning sensations around red patches</li>
+                </ul>
               </>
             ),
           },
@@ -190,26 +301,26 @@ export const tabsData = {
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-1.png",
         title: "Safe and Effective Treatment",
-        alt: "Comprehensive psoriasis Management",
-        text: "It is very much suggested to opt for Homeopathy in the case of low back pain as this is a safe way out from this illness, either acute or chronic. Medicines and treatment are administered after identifying the root cause of the problem through the constitutional procedure. Homeopathy ensures zero side-effects compared to modern medicine, which may offer instant relief but comes with risks.",
+        alt: "Comprehensive Psoriasis Management",
+        text: "Homeopathy is a safe and effective choice for managing psoriasis, ensuring no side effects. At Dr. Care Homeopathy, we treat psoriasis by addressing its root causes through a personalized approach, unlike modern medicine which often provides temporary relief with risks.",
       },
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-2.png",
         title: "Personalized Care",
         alt: "Personalized Psoriasis Management",
-        text: "At Dr. Care Homeopathy, we prioritize identifying the root cause of psoriasis and offer personalized care that caters to the unique symptoms of each patient. Our doctors provide solutions that address the disease at its core, helping control its spread and severity.",
+        text: "At Dr. Care Homeopathy, we focus on personalized care for psoriasis patients, tailoring treatments to each individual's unique symptoms. We aim to control the spread and intensity of psoriasis, offering long-term relief by targeting the disease's core causes.",
       },
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-3.png",
-        alt: "clinic excellence",
+        alt: "Experienced Doctors",
         title: "Experienced Doctors",
-        text: "Our experienced team of homeopathic doctors, each with over 20+ years of expertise, is committed to delivering patient-centric treatment. With years of experience in treating psoriasis, our team ensures effective relief, even in severe cases.",
+        text: "Our doctors, with over 20 years of experience in treating psoriasis, provide patient-centric solutions for both mild and severe cases. At Dr. Care Homeopathy, we emphasize holistic treatment to ensure the best outcomes for our patients.",
       },
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-4.png",
-        alt: "experience",
+        alt: "Get in Touch",
         title: "Get in Touch with Us",
-        text: "For more information about the treatments and services offered by Dr. Care Homeopathy, call us at 07337557853. Let us help you embark on your journey to better health and well-being.",
+        text: "For more information about psoriasis treatments at Dr. Care Homeopathy, please call us at 07337557853. Let us support you on your journey to healthier skin and improved well-being.",
       },
     ],
   },
@@ -247,9 +358,9 @@ export const tabsData = {
               <>
                 <ul>
                   <li>
-                    Occupational Asthma is Asthma brought on by a person&apos;s line
-                    of work. The symptoms of occupational Asthma worsen while
-                    working in a specific environment, such as a bakery,
+                    Occupational Asthma is Asthma brought on by a person&apos;s
+                    line of work. The symptoms of occupational Asthma worsen
+                    while working in a specific environment, such as a bakery,
                     chemical industry, farm, laboratory, medicinal factory,
                     metal or plastic plant, wood factory, painting job, etc.
                   </li>
@@ -432,9 +543,9 @@ export const tabsData = {
                 <ul>
                   <li>
                     Kidney stones can develop when urine contains excessive
-                    amounts of stone-forming compounds. When the crystals aren&apos;t
-                    sufficiently diluted with fluid, they can form masses of
-                    different sizes and shapes that harden together.
+                    amounts of stone-forming compounds. When the crystals
+                    aren&apos;t sufficiently diluted with fluid, they can form
+                    masses of different sizes and shapes that harden together.
                   </li>
                   <li>The stone-forming substances include</li>
                   <li>Calcium</li>
