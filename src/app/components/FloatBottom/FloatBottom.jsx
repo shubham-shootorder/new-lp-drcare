@@ -14,9 +14,7 @@ const FloatBottom = ({ center, referal, refId, testlp = false }) => {
   const handleShow = () => setShow(true);
   return (
     <>
-      <div className="footer-notification">
-        <NotificationBar />
-      </div>
+      <div className="footer-notification">{/* <NotificationBar /> */}</div>
       <div className="float-bottom d-flex d-md-none noth moth">
         <button className="float-btm-text1">
           <a
@@ -44,29 +42,15 @@ const FloatBottom = ({ center, referal, refId, testlp = false }) => {
           </h5>
         </Modal.Header>
         <Modal.Body>
-          {/* Render the LeadForm component here */}
-          {/* <LeadForm service="ivf" /> */}
-          {testlp ? (
-            <>
-              <ModalFormSF
-                service="ivf"
-                phoneNumber={center?.phone}
-                centerName={center?.center_name}
-                referal={referal}
-                refId={refId}
-              />
-            </>
-          ) : (
-            <>
-              <ModalForm
-                service="ivf"
-                phoneNumber={center?.phone}
-                centerName={center?.center_name}
-                referal={referal}
-                refId={refId}
-              />
-            </>
-          )}
+          <>
+            <ModalForm
+              service="ivf"
+              phoneNumber={center?.phone}
+              centerName={center?.center_name}
+              referal={referal}
+              refId={refId}
+            />
+          </>
         </Modal.Body>
       </Modal>
     </>
