@@ -54,7 +54,7 @@ const diseasesInfo = [
     heading: "Say Goodbye to Low Back Pain with Homeopathy",
     content:
       "Discover effective homeopathic remedies for low back pain that target the root causes and provide long-lasting relief without harsh medications.",
-    imageUrl: "/img/spondylytis-banner", // Replace with actual image URL
+    imageUrl: "/img/Spondylytis-Banner.jpg", // Replace with actual image URL
   },
 ];
 
