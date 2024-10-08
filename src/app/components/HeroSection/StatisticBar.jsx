@@ -11,9 +11,9 @@ const StatisticBar = () => {
           <div className="col-md-3 col-6 pt-2 pb-2">
             <h3>
               <div data-from="0" data-to="44">
-                44{" "}
+                44{" "}  L
               </div>{" "}
-              Lakhs
+             
             </h3>
             <p className="text-white">Patients</p>
           </div>
@@ -21,7 +21,7 @@ const StatisticBar = () => {
           <div className="col-md-3 col-12 pt-2 pb-2">
             <h3>
               <div data-from="0" data-to="20">
-                20 Years
+                20 Y
               </div>
             </h3>
             <p className="text-white">Experience</p>

@@ -64,7 +64,7 @@ function FertilitySection({ tabsDataPass, title }) {
   }, []);
 
   return (
-    <div id="f-section">
+    <div id="f-section" style={{backgroundColor:"#F7F7F7",padding:"20px 0px"}}>
       <h1 className="container heading-text text-black mb-3">
         Homeopathy Treatment For {title}
       </h1>

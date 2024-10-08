@@ -201,122 +201,132 @@ export const tabsData = {
       },
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-3.png",
-        alt:"clinic excellence",
+        alt: "clinic excellence",
         title: "Experienced Doctors",
         text: "Our experienced team of homeopathic doctors, each with over 20+ years of expertise, is committed to delivering patient-centric treatment. With years of experience in treating psoriasis, our team ensures effective relief, even in severe cases.",
       },
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-4.png",
-        alt:"experience",
+        alt: "experience",
         title: "Get in Touch with Us",
         text: "For more information about the treatments and services offered by Dr. Care Homeopathy, call us at 07337557853. Let us help you embark on your journey to better health and well-being.",
       },
     ],
   },
   // Add more diseases as needed
-  "asthma": {
+  asthma: {
     url: "asthma",
-    eventKey: "infertility-testing",
-    title: " Asthama",
+    eventKey: "asthma-overview",
+    title: "Asthma",
     tabs: [
       {
-        eventKey: "infertility-testing",
+        eventKey: "asthma-overview",
         title: "Overview",
         content: [
           {
-            imageSrc: "/img/diabetes-1.jpg",
-            title: "What is Diabetes Mellitus?",
-            desc: "The word “Diabetes mellitus” means honey urine or madhumeha in sanskrit. It was so-called as it was observed that this urine use to attract ants. It is not a new disease but an ancient one but believed to be affecting only the affluent class. Often referred s blood sugar by lay man, diabetes is a metabolic disorder causing increased sugar or glucose level in the blood due to either insufficiency of internal secretion hormone or the unresponsiveness of the cells to both.",
+            imageSrc: "/img/asthma-sub.jpg",
+            title: "What is Asthma?",
+            desc: "Asthma is a chronic respiratory condition characterized by inflammation and narrowing of the airways, leading to difficulty in breathing. Common symptoms include wheezing, shortness of breath, chest tightness, and coughing, particularly at night or early in the morning. Asthma can be triggered by various factors, including allergens, respiratory infections, physical activity, cold air, and stress.",
           },
-          // Additional content
+          // Additional overview content can be added here
         ],
       },
       {
-        eventKey: "infertility-treatments",
+        eventKey: "asthma-types",
         title: "Types",
         content: [
           {
             imageSrc: "",
-            title: "Type 1",
-            desc: "diabetes dependent diabetes Glucose metabolism and utilization is the prime responsibility of hormone secreted by the “beta cells” of Pancreas. In type 1 diabetes, the beta cells are lost leading to non secretion of hormone. It is mainly considered as an auto immune hereditary condition and affects an individual at an early age, as early as in childhood.",
+            title: "Allergic (Extrinsic) Asthma",
+            desc: "Allergic asthma is triggered by exposure to allergens such as pollen, dust mites, mold spores, pet dander, or certain foods. It is often associated with other allergic conditions like hay fever or eczema.",
           },
           {
             imageSrc: "",
-            title: "Type 2",
-            desc: "diabetes or Non internal secretion dependent diabetes In type 2 diabetes though the beta cells secrete, it is either inadequate or the body cells fail to respond to it. The defective responsiveness of body tissues to internal secretion is believed to involve the receptor. However, the specific defects are not known. Type 2 diabetes is the most common type of diabetes. ",
+            title: "Non-Allergic (Intrinsic) Asthma",
+            desc: "Non-allergic asthma is not triggered by allergens. Instead, it may be caused by factors such as stress, exercise, cold air, viral infections, or exposure to irritants like smoke or strong odors.",
           },
           {
             imageSrc: "",
-            title: "Type 3",
-            desc: "Gestational Diabetes occurring during the state of pregnancy is known as Gestational diabetes. Previously, apparently normal woman may develop high blood sugar levels during her pregnancy. It may be transient and sugar levels could come down to normalcy after delivery but in some it can lead to Type 2 diabetes",
+            title: "Occupational Asthma",
+            desc: "Occupational asthma is triggered by inhaling fumes, gases, dust, or other potentially harmful substances in the workplace. Common industries where occupational asthma may occur include baking, chemical manufacturing, farming, and healthcare.",
           },
           {
             imageSrc: "",
-            title: "Type 4",
-            desc: "Maturity Onset Diabetes of Young Acronymed as MODY, it is an autosomal dominant genetic disorder affecting internal secretion production and often runs in families.",
+            title: "Exercise-Induced Bronchoconstriction (EIB)",
+            desc: "Exercise-induced bronchoconstriction, also known as exercise-induced asthma, occurs when physical activity triggers the narrowing of airways, leading to difficulty breathing during or after exercise.",
           },
-          // Additional content
+          // Additional types can be added here
         ],
       },
       {
-        eventKey: "advanced-treatments",
+        eventKey: "asthma-symptoms",
         title: "Symptoms",
         content: [
           {
             imageSrc: "",
-            title: "The classical symptoms of diabetes are",
+            title: "Common Symptoms of Asthma",
             desc: (
               <>
                 <ul>
-                  <li>High blood sugar</li>
-                  <li>Frequent thirst</li>
-                  <li>Increased appetite</li>
-                  <li>Increased frequency in urination</li>
-                  <li>Losing weight in spite of eating well</li>
-                  <li>Tiredness</li>
                   <li>
-                    Burning sensation in feet, numbness and tingling in
-                    extremities
+                    Wheezing: A whistling or squeaky sound when breathing.
                   </li>
-                  {/* Other list items */}
+                  <li>
+                    Shortness of Breath: Difficulty breathing or feeling out of
+                    breath.
+                  </li>
+                  <li>
+                    Chest Tightness: A feeling of pressure or tightness in the
+                    chest.
+                  </li>
+                  <li>
+                    Coughing: Persistent cough, especially at night or early
+                    morning.
+                  </li>
+                  <li>
+                    Difficulty Sleeping: Symptoms can worsen at night,
+                    disrupting sleep.
+                  </li>
+                  <li>
+                    Fatigue: Feeling unusually tired due to poor sleep and
+                    increased effort to breathe.
+                  </li>
+                  {/* Other list items can be added here */}
                 </ul>
                 <p>
-                  Besides these symptoms the increased concentration of sugar in
-                  blood for a prolonged period of time can lead to many
-                  complications like diabetic retinopathy causing vision
-                  disturbances, diabetic nephropathy or kidney problems,
-                  diabetic neuropathy affecting nerves which can lead to
-                  problems like burning sensation or loss of sensation, feeling
-                  of imbalance, ejaculation disorders in males, urinary
-                  incontinence etc. Diabetes is also the major risk factor for
-                  hypertension, atherosclerosis and heart disorders. Frequent
-                  infections, poor healing of wounds, non healing ulcers are
-                  also other complications of diabetes.
+                  In addition to these primary symptoms, asthma can lead to
+                  exacerbations or asthma attacks, which may include severe
+                  shortness of breath, rapid breathing, increased heart rate,
+                  and an inability to speak in full sentences. Long-term
+                  uncontrolled asthma can result in permanent narrowing of the
+                  airways and reduced lung function.
                 </p>
               </>
             ),
           },
+          // Additional symptoms content can be added here
         ],
       },
+      // You can add more tabs like "Treatment", "Management", etc., as needed
     ],
     carousel: [
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-1.png",
-        alt: "Comprehensive Diabetes Management",
+        alt: "Comprehensive Asthma Management",
         title: "Comprehensive Management",
-        text: "Diabetes treatment encompasses lifestyle and dietary modifications in addition to medications. At Dr. Care Homeopathy, we integrate these elements to provide a holistic approach to managing diabetes effectively.",
+        text: "Asthma treatment encompasses lifestyle and environmental modifications in addition to medications. At Dr. Care Homeopathy, we integrate these elements to provide a holistic approach to managing asthma effectively.",
       },
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-2.png",
         alt: "Addressing Root Causes",
         title: "Addressing Root Causes",
-        text: "While conventional hormonal medicines regulate blood sugar levels, they often overlook the underlying causes of diabetes. Homeopathy focuses on the patient’s physical, mental, and emotional symptoms to not only maintain hormonal balance but also eliminate the root causes of the disorder.",
+        text: "While conventional treatments focus on relieving symptoms, they often overlook the underlying causes of asthma. Homeopathy focuses on the patient’s physical, mental, and emotional symptoms to not only manage asthma but also address its root causes.",
       },
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-3.png",
         alt: "Experienced and Dedicated Team",
         title: "Dedicated Team",
-        text: "Our team of well-experienced doctors and dynamic medicines at Dr. Care Homeopathy have successfully aided numerous individuals in leading healthy and normal lives. We prioritize personalized care tailored to each patient’s unique needs.",
+        text: "Our team of well-experienced doctors and dynamic treatments at Dr. Care Homeopathy have successfully aided numerous individuals in managing their asthma effectively. We prioritize personalized care tailored to each patient’s unique needs.",
       },
       {
         imageSrc: "/img/icons/Clinical-Excellence-01-01-01-4.png",
@@ -662,7 +672,7 @@ export const tabsData = {
       },
     ],
   },
-  "piles": {
+  piles: {
     url: "piles",
     eventKey: "infertility-testing",
     title: "Piles",
@@ -774,7 +784,7 @@ export const tabsData = {
       },
     ],
   },
-  "spondylosis": {
+  spondylosis: {
     url: "spondylosis",
     eventKey: "infertility-testing",
     title: "Spondylosis",
