@@ -44,7 +44,7 @@ const diseasesInfo = [
   },
   {
     slug: "piles",
-    heading: "Say Goodbye to Low Back Pain with Homeopathy",
+    heading: "Say Goodbye to Piles with Homeopathy's Gentle Care",
     content:
       "Discover effective homeopathic remedies for low back pain that target the root causes and provide long-lasting relief without harsh medications.",
     imageUrl: "/img/piles-banner.jpg", // Replace with actual image URL
