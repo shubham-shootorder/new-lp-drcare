@@ -1,10 +1,8 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import Modal from "react-bootstrap/Modal";
 import LeadForm from "@/app/components/LeadForm/LeadForm";
-import Head from "next/head";
 
 const ThankyouComponent = () => {
   const [show, setShow] = useState(false);
@@ -19,7 +17,7 @@ const ThankyouComponent = () => {
             <div className="container align-items-center">
               <a className="navbar-brand" href="#">
                 <Image
-                  src={`/img/logo.png`}
+                  src={`/img/logo.svg`}
                   alt="logo"
                   width={172}
                   height={60}
@@ -43,7 +41,7 @@ const ThankyouComponent = () => {
             </div>
           </nav>
         </header>
-        <section className="thank-yousec" style={{ marginTop: "50px" }}>
+        <section className="thank-yousec" style={{ marginTop: "50px",minHeight:"70vh",display:"flex",justifyContent:"center",alignItems:"center" }}>
           <div className="container">
             <h1 className="heading-text">THANK YOU.</h1>
             <p className="text-center text-black">
@@ -132,13 +130,13 @@ const ThankyouComponent = () => {
             <p className="text-center texttt-white">
               {" "}
               Please search
-              <Image
+              {/* <Image
                 src={`/img/map2.svg`}
                 alt="verified"
                 className="img-fluid whatsaap-icon"
                 width={250}
                 height={100}
-              />
+              /> */}
               &nbsp; to save the location to easily reach for a
               free&nbsp;consultation.
             </p>

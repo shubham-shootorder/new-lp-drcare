@@ -6,7 +6,7 @@ const Home = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/lp/hyderabad/');
+    router.push('/psoriasis/');
   }, [router]);
   return (
     <>

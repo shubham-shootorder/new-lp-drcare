@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import NotificationBar from "./NotificationBar";
 
-const Header = ({ center }) => {
+const Header = () => {
   // const phoneNumber = phone.replace('tel:', '');
   return (
     <>
@@ -12,7 +12,6 @@ const Header = ({ center }) => {
           <nav className="navbar">
             <div className="container align-items-center">
               <a className="navbar-brand" href="#">
-                {/* <Image src={`${root}assets/img/logo.png`} alt="logo" width={172} height={60} /> */}
                 <Image
                   src={`/img/logo.svg`}
                   alt="logo"
@@ -22,8 +21,8 @@ const Header = ({ center }) => {
               </a>
               <div className="d-flex">
                 <div className="d-flex">
-                  <a href={center?.phone} className="wbtn d-md-block d-none">
-                    {center?.phone.replace("tel:", "")}
+                  <a href="tel:+91 90115166994" className="wbtn d-md-block d-none">
+                    +91 9011516694
                   </a>
                   &nbsp; &nbsp;
                   <a

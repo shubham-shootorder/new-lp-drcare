@@ -1,52 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import StatisticBar from "./StatisticBar";
 import LeadForm from "../LeadForm/LeadForm";
 import "./FreeBanner.css";
 import Free from "../../../../public/img/Free-01.png";
 import Link from "next/link";
-import LeadFormSF from "../LeadForm/LeadFormSF";
 
-const formatServiceName = (service) => {
-  if (service === "fertility") {
-    return "Fertility";
-  }
-  return service.toUpperCase();
-};
+const HeroSection = ({ diseaseInfo }) => {
+  const { heading, imageUrl } = diseaseInfo; // Destructure heading and imageUrl from diseaseInfo
 
-const HeroSection = ({
-  root,
-  term,
-  masterRow,
-  states,
-  center,
-  service,
-  querySubTitle = "",
-  referal = false,
-  refId,
-  testlp = false,
-}) => {
   return (
     <>
       <section
         className="hero-banner"
         style={{
-          backgroundImage: `url(${center?.backgroundImage})`, // Dynamically set background image
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          position: 'relative',
-          zIndex: '1',
-          // Use !important to override CSS classes
-
+          backgroundImage: `url(${imageUrl})`, // Dynamically set background image
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+          zIndex: "1",
         }}
       >
         <div className="container">
           <div className="row align-items-start">
             {/* Hero Heading */}
-
             <div className="col-md-8">
               <div className="row">
                 <div
@@ -54,9 +34,10 @@ const HeroSection = ({
                   style={{ height: "400px" }}
                 >
                   <div>
-                    <h1>Diabetes Relief Through <br/>Homeopathy Solutions</h1>
+                    <h1>{heading}</h1>
                   </div>
                   <div className="col-md-7" style={{ position: "relative" }}>
+                    {/* Optional image, can uncomment if needed */}
                     {/* <Image
                       src={Free}
                       alt="test"
@@ -69,7 +50,10 @@ const HeroSection = ({
               </div>
             </div>
 
-            <div className="col-12 d-md-none d-block" style={{ padding: "0px" }}>
+            <div
+              className="col-12 d-md-none d-block"
+              style={{ padding: "0px" }}
+            >
               <div className="col-md-12 d-md-none d-block hero-header home mob-hero-bg">
                 <Image
                   src="/img/mob-banner-so-min.webp"
@@ -81,23 +65,11 @@ const HeroSection = ({
                   priority={true}
                   style={{ zIndex: "-1" }}
                 />
-                <div className="d-flex flex-column" style={{ justifyContent: 'space-between', height: "310px" }}>
-                  <div>
-                    <h1>
-                      Best {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
-                      {center?.center_name_heading
-                        .split("-")
-                        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                        .join(" ")}
-                    </h1>
-                    <h2>
-                      {!querySubTitle ? (
-                        <>{center?.hero_title}</>
-                      ) : (
-                        <>{querySubTitle} is inviting you to Oasis Fertility</>
-                      )}
-                    </h2>
-                  </div>
+                <div
+                  className="d-flex flex-column"
+                  style={{ justifyContent: "space-between", height: "310px" }}
+                >
+                  <div></div>
                   <div style={{ textAlign: "center", marginTop: "0" }}>
                     <Link href={`tel:9437751812`}>
                       <Image
@@ -143,23 +115,7 @@ const HeroSection = ({
             </div>
 
             {/* Hero section form */}
-            {testlp ? (
-              <LeadFormSF
-                service={service}
-                phoneNumber={center?.phone}
-                centerName={center?.center_name}
-                referal={referal}
-                refId={refId}
-              />
-            ) : (
-              <LeadForm
-                service={service}
-                phoneNumber={center?.phone}
-                centerName={center?.center_name}
-                referal={referal}
-                refId={refId}
-              />
-            )}
+            <LeadForm />
           </div>
         </div>
       </section>

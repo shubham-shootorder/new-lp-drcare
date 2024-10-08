@@ -1,30 +1,23 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import oa_state from "@/state";
+import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import centerCity from "@/center-city";
 
-const LeadForm = ({
-  service,
-  phoneNumber,
-  centerName,
-  referal = false,
-  refId,
-}) => {
+const LeadForm = ({}) => {
   const router = useRouter();
-  const [selectedState, setSelectedState] = useState("");
-  const [branches, setBranches] = useState([]);
-  const [datetime] = useState(new Date().toISOString().split("T")[0]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [urlPath, setUrlPath] = useState("");
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setUrlPath(window.location.pathname);
+    }
+  }, []);
   // Form Lead
   const [fullname, setFullname] = useState("");
-  const [referalField, setReferalField] = useState("");
-  // const [mobile, setMobile] = useState("");
-  const [selectedBranch, setSelectedBranch] = useState("");
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(true);
@@ -65,20 +58,6 @@ const LeadForm = ({
       e.preventDefault();
     }
   };
-
-  // const handleStateChange = (e) => {
-  //   const selectedValue = parseInt(e.target.value);
-  //   setSelectedState(selectedValue);
-  //   const filteredBranches = centerCity.filter(
-  //     (center) => center.state_id === selectedValue
-  //   );
-  //   setBranches(filteredBranches);
-  // };
-
-  // const handleBranchChange = (e) => {
-  //   setSelectedBranch(e.target.value);
-  // };
-
   const handleGenderChange = (e) => {
     const selectedGender = e.target.value;
     setGender(selectedGender);
@@ -114,29 +93,15 @@ const LeadForm = ({
   const stripPrefix = (number) => {
     return number.replace(/^\+91/, "");
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+    console.log("function is working properly");
     // Extract values from form fields
     const fullname = document.getElementById("fullname").value;
     const mobile = document.getElementById("mobile").value;
-    const strippedMobile = stripPrefix(mobile);
-    // const location = document.getElementById("location").value;
-    // const branch = document.getElementById("branch").value;
     const gender = document.getElementById("gender").value;
     const age = document.getElementById("age").value;
-    // const sourceUtm = document.getElementById("utm_source").value;
-    // const mediumUtm = document.getElementById("utm_medium").value;
-    // const campaignUtm = document.getElementById("utm_campaign").value;
-    let referalFieldValue;
-    if (referal) {
-      referalFieldValue = document.getElementById("referalName").value;
-      console.log(referalFieldValue);
-    }
-
-    // Extract UTM parameters from the URL
     const urlParams = new URLSearchParams(window.location.search);
     let sourceUtm = urlParams.get("utm_source");
     let mediumUtm = urlParams.get("utm_medium");
@@ -144,7 +109,6 @@ const LeadForm = ({
     let contentUtm = urlParams.get("utm_content");
     let termUtm = urlParams.get("utm_term");
     let campaignIdUtm = urlParams.get("campaignid");
-    let adgroupIdUtm = urlParams.get("adgroupid");
 
     // If UTM parameters are null, set them to empty strings
     sourceUtm = sourceUtm ? sourceUtm : "";
@@ -153,98 +117,34 @@ const LeadForm = ({
     contentUtm = contentUtm ? contentUtm : "";
     termUtm = termUtm ? termUtm : "";
     campaignIdUtm = campaignIdUtm ? campaignIdUtm : "";
-    adgroupIdUtm = adgroupIdUtm ? adgroupIdUtm : "";
 
-    // Add more fields as
-    // const stateName = oa_state.filter(
-    //   (item) => item.state_id === Number(location)
-    // );
-
-    // const cityCenterName = centerCity.filter((item) => item.id === branch);
-    // const sname = stateName[0]?.name;
-    // const cname = cityCenterName[0]?.name;
-    let originValue = sourceUtm ? "paid" : "organic";
-    if (
-      centerName === "karnataka" ||
-      centerName === "telangana" ||
-      centerName === "andhrapradesh"
-    ) {
-      originValue = "Influencer";
-    }
-
-    // const selectYourBranch = `${cname}`;
-    const selectYourBranch = centerName;
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "userProvidedData",
-      phone_number: mobile,
-    });
-
-    // Construct dataObject
-    const dataObject = [
-      { Attribute: "FirstName", Value: fullname },
-      { Attribute: "mx_Gender", Value: gender },
-      { Attribute: "mx_Age", Value: age },
-      { Attribute: "mx_SelectYourBranch", Value: selectYourBranch },
-      { Attribute: "Mobile", Value: strippedMobile },
-      { Attribute: "Source", Value: sourceUtm },
-      { Attribute: "mx_UTM_Campaign", Value: campaignUtm },
-      { Attribute: "mx_UTM_Source", Value: sourceUtm },
-      { Attribute: "mx_UTM_medium", Value: mediumUtm },
-      { Attribute: "mx_UTM_Content", Value: contentUtm },
-      { Attribute: "mx_UTM_Term", Value: termUtm },
-      { Attribute: "mx_Source_Campaign_ID", Value: campaignIdUtm },
-      { Attribute: "mx_Source_Adgroup_Id", Value: adgroupIdUtm },
-      { Attribute: "Origin", Value: originValue },
-      { Attribute: "mx_Appointment_Date", Value: datetime },
-      { Attribute: "SearchBy", Value: "Mobile" },
-    ];
-
-    if (referal) {
-      dataObject.push({ Attribute: "Notes", Value: referalFieldValue });
-      // dataObject.push({ Attribute: "Source", Value: "Live Birth" });
-      dataObject.push({ Attribute: "Subsource", Value: "WhatsApp" });
-      // dataObject.push({ Attribute: "Origin", Value: refId });
-      dataObject.find((item) => item.Attribute === "Source").Value =
-        "Live Birth";
-      // dataObject.find(item => item.Attribute === "Subsource").Value = "WhatsApp";
-      dataObject.find((item) => item.Attribute === "Origin").Value = refId;
-    }
-
-    // Make API call
     try {
-      const accessKey = "u$r28bf3b3ba19df2ce87f563a0c9e7d95d";
-      const secretKey = "eb6eaef1c9fc31bceaf852a72b99a3b827883261";
-      const url = `https://api.leadsquared.com/v2/LeadManagement.svc/Lead.Capture?&accessKey=${accessKey}&secretKey=${secretKey}`;
-
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(dataObject),
+      const response = await axios.post("/api/data", {
+        // Changed endpoint to match your API route
+        full_name: fullname,
+        phone: mobile,
+        others: `gender is ${gender} and age is ${age}`, // Store additional info
+        service: urlPath, // Ensure `urlPath` is defined appropriately
+        utm_source: sourceUtm,
+        utm_medium: mediumUtm,
+        utm_campaign: campaignUtm,
+        utm_content: contentUtm,
+        utm_term: termUtm,
       });
-
-      if (response.ok) {
-        setIsSubmitting(false);
-        // router.push("/lp/thankyou", { scroll: false });
-        window.location.href = "https://oasisindia.in/thank-you";
-        e.target.reset();
-      } else {
-        setIsSubmitting(false);
-        setShowErrorMessage(true);
-        console.error("Failed to capture lead:", response.statusText);
-      }
-    } catch (error) {
+      console.log(response);
+      // toast.success("Form submitted successfully!")
       setIsSubmitting(false);
-      setShowErrorMessage(true);
-      console.error("Error capturing lead:", error);
+      router.push("/thankyou");
+     
+    } catch (error) {
+      // toast.error("There was a problem with the form submission.");
+      console.error("There was a problem with the fetch operation:", error);
     }
   };
 
   return (
     <>
+      {/* <Toaster toastOptions={{ style: { zIndex: 10000000 } }} /> */}
       <div className="col-md-4 oasis-startjour frm">
         <h1 className="heading-text pb-2 d-md-none d-block" data-aos="zoom-in">
           {/* Affordable {service ? service.toUpperCase() : "IVF"} Cost */}
@@ -330,22 +230,6 @@ const LeadForm = ({
                 </div>
               </div>
             </div>
-
-            {referal && (
-              <>
-                <div className="mb-3">
-                  <input
-                    placeholder="Name of your friend/Referrer to Oasis"
-                    type="text"
-                    className="form-control"
-                    id="referalName"
-                    name="referalName"
-                    value={referalField}
-                    onChange={(e) => setReferalField(e.target.value)}
-                  />
-                </div>
-              </>
-            )}
             <center>
               <div className="mb-3 form-check">
                 <input
@@ -386,23 +270,9 @@ const LeadForm = ({
                 }}
               >
                 Error in submission! Please call
-                <a
-                  href={phoneNumber}
-                  className="wbtn d-md-block"
-                  style={{ color: "#672658", padding: "0 0 0 5px" }}
-                >
-                  {phoneNumber?.replace("tel:", "")}
-                </a>
               </p>
             </>
           )}
-
-          {/* <div className="form-footer text-center">
-            <p className="avail-emi">
-              Avail 0% interest on <b>EMI</b>
-            </p>
-            <p>All Procedures | No Upper Limit</p>
-          </div> */}
         </div>
       </div>
     </>

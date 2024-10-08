@@ -3,7 +3,7 @@ import ThankyouComponent from "@/app/components/ThankyouComponent/ThankyouCompon
 
 export async function generateMetadata({ params, searchParams }, parent) {
 
-    const pageTitle = "Thank You - Oasis Fertility"
+    const pageTitle = "Thank You - Dr Care"
     return {
         title: pageTitle,
     }
@@ -11,7 +11,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default function Page() {
     return (
         <>
-            <ThankyouComponent />
+            <ThankyouComponent  />
         </>
     );
 }
