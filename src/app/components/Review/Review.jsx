@@ -1,19 +1,10 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { register } from "swiper/element/bundle";
 register();
 
-const Review = ({
-  term,
-  masterRow,
-  testimonialsResult,
-  root,
-  center,
-  service,
-  filteredReview,
-}) => {
+const Review = ({ filteredReview }) => {
   const swiperElRef = useRef(null);
 
   useEffect(() => {
@@ -35,7 +26,7 @@ const Review = ({
             background-color: #fff;
             padding: 10px;
             border-radius: 50%;
-            box-shadow: 0 3.5833332538604736px 3.5833332538604736px 0 #6f62780d;
+            box-shadow: 0 3.583px 3.583px 0 #6f62780d;
             height: 30px;
           }
           .swiper-button-prev-1 {
@@ -59,16 +50,18 @@ const Review = ({
             height: 45px;
             transform: translateY(-50%);
           }
-          .swiper-button-next-1::after,.swiper-button-prev-1::after {
+          .swiper-button-next-1::after,
+          .swiper-button-prev-1::after {
             content: "";
-         }
-          .swiper-button-next-1 svg,.swiper-button-prev-1 svg {
+          }
+          .swiper-button-next-1 svg,
+          .swiper-button-prev-1 svg {
             display: none;
-         }
+          }
           .swiper-pagination-bullet{
             display: none;
           }
-      `,
+        `,
       ],
     };
 
@@ -81,30 +74,17 @@ const Review = ({
       <div className="container">
         <div className="d-none d-md-none d-lg-block">
           <h2 className="heading-text" data-aos="zoom-in">
-            {/* Best Reviewed {term.toUpperCase()} Clinic in {masterRow.center_name && masterRow.center_name.charAt(0).toUpperCase() + masterRow.center_name.slice(1)} */}
-            {/* Best Reviewed {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
-            {center?.center_name
-              .split("-")
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")} */}
-              Hear from what our
-              patients say.
+            Hear from what our patients say.
           </h2>
         </div>
         <div className="hedy d-block d-md-none noth moth">
           <h2 className="heading-text" data-aos="zoom-in">
-            {/* Best Reviewed {service ? service.toUpperCase() : "IVF"} Clinic in{" "}
-            {center?.center_name
-              .split("-")
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ")} */}
-              Hear from what our
-              patients say.
+            Hear from what our patients say.
           </h2>
         </div>
 
         <div className="carousel-wrap">
-          <div className=" google-reviews">
+          <div className="google-reviews">
             <swiper-container
               ref={swiperElRef}
               slides-per-view="1"

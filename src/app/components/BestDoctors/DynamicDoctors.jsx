@@ -8,13 +8,7 @@ import "./doctorcard.css";
 register();
 
 const DynamicDoctors = ({
-  term,
-  masterRow,
-  doctorsResult,
-  root,
-  center,
-  service,
-  filteredTestimonials,
+ 
 }) => {
   const swiperElRef = useRef(null);
 
@@ -88,15 +82,7 @@ const DynamicDoctors = ({
     <section className="section-heading-so so-fix">
       <div className="container">
         <h2 className="heading-text mb-2" data-aos="zoom-in">
-          Best Fertility
-          {service && service !== "fertility"
-            ? service.toUpperCase()
-            : " IVF"}{" "}
-          Doctors in{" "}
-          {center?.center_name
-            .split("-")
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ")}
+         Dr. A M Reddy
         </h2>
 
         <p

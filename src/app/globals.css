@@ -547,6 +547,9 @@ footer p{
       min-height: 210px !important;
   }
 }
+.google-reviews .item{
+  min-height: 310px !important;
+}
 
 .carousel-indicators{
   display: none !important;
@@ -579,4 +582,7 @@ footer p{
 }
 .oasis-stats{
   z-index: 10;
+}
+.doc-card .text-block h3{
+  color:black !important;
 }

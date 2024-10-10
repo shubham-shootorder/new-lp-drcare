@@ -10,15 +10,15 @@ function CardContent({ imageSrc, title, desc }) {
   const defaultImage = "https://via.placeholder.com/150"; // Default image URL
 
   return (
-    <div className="card mobile-card-p">
-      <div className="row g-0 align-items-center fertility-card-content">
+    <div className="card mobile-card-p h-100 d-flex flex-column">
+      <div className="row g-0 align-items-center fertility-card-content flex-grow-1">
         {imageSrc && (
           <div className="col-12 col-md-4">
             <div className="icon-placeholder mx-auto treatment-img-card">
               <Image
                 src={imageSrc || defaultImage}
                 alt={title}
-                className="img-fluid rounded"
+                className="img-fluid rounded treatment-img"
                 height={200}
                 width={300}
               />
@@ -26,11 +26,13 @@ function CardContent({ imageSrc, title, desc }) {
           </div>
         )}
         <div className={`col-12 ${imageSrc !== "" ? "col-md-8" : "col-md-12"}`}>
-          <div className="card-body">
+          <div className="card-body d-flex flex-column">
             <p className="card-title avail-emi text-center text-md-start">
               {title}
             </p>
-            <div className="card-text text-center text-md-start">{desc}</div>
+            <div className="card-text text-md-start flex-grow-1">
+              {desc}
+            </div>
           </div>
         </div>
       </div>
@@ -38,7 +40,7 @@ function CardContent({ imageSrc, title, desc }) {
   );
 }
 
-// FertilitySection (or DiseaseSection) Component
+// FertilitySection Component
 function FertilitySection({ tabsDataPass, title }) {
   const navRef = useRef(null);
   const [activeKey, setActiveKey] = useState(tabsDataPass[0]?.eventKey || "");
@@ -64,7 +66,7 @@ function FertilitySection({ tabsDataPass, title }) {
   }, []);
 
   return (
-    <div id="f-section" style={{backgroundColor:"#F7F7F7",padding:"20px 0px"}}>
+    <div id="f-section" style={{ padding: "20px 0px" }}>
       <h1 className="container heading-text text-black mb-3">
         Homeopathy Treatment For {title}
       </h1>
@@ -76,7 +78,7 @@ function FertilitySection({ tabsDataPass, title }) {
       >
         <Nav
           variant="tabs"
-          className="container mt-3 flex-nowrap justify-content-start justify-content-md-center"
+          className="container mt-3 mb-4 flex-nowrap justify-content-start justify-content-md-center"
           ref={navRef}
         >
           {tabsDataPass.map((tab) => (
@@ -86,7 +88,7 @@ function FertilitySection({ tabsDataPass, title }) {
           ))}
         </Nav>
 
-        <TabContent>
+        <TabContent style={{ backgroundColor: "#d7f4ff" }} className="pb-4 w-100">
           {tabsDataPass.map((tab) => (
             <TabPane key={tab.eventKey} eventKey={tab.eventKey}>
               <div className="row container justify-content-center g-4 mx-auto">
@@ -99,7 +101,7 @@ function FertilitySection({ tabsDataPass, title }) {
                       : "col-12 col-lg-6 col-md-6";
 
                     return (
-                      <div key={index} className={columnClass}>
+                      <div key={index} className={`${columnClass} `}>
                         <CardContent
                           imageSrc={content.imageSrc}
                           title={content.title}

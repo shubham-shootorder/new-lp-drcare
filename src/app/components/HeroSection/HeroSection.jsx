@@ -1,16 +1,41 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import StatisticBar from "./StatisticBar";
 import LeadForm from "../LeadForm/LeadForm";
 import "./FreeBanner.css";
-import Free from "../../../../public/img/Free-01.png";
-import Link from "next/link";
+import { splitHeading } from "@/utils/splitHeading";
 
 const HeroSection = ({ diseaseInfo }) => {
   const { heading, imageUrl } = diseaseInfo; // Destructure heading and imageUrl from diseaseInfo
+  const [windowWidth, setWindowWidth] = useState(0);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Set initial window width
+      setWindowWidth(window.innerWidth);
+
+      // Handler to update window width on resize
+      const handleResize = () => setWindowWidth(window.innerWidth);
+
+      window.addEventListener("resize", handleResize);
+
+      // Cleanup event listener on unmount
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+  // Determine words per line based on window width
+  const getWordsPerLine = () => {
+    if (windowWidth < 576) return 2; // Extra small devices
+    if (windowWidth < 768) return 2; // Small devices
+    return 3; // Medium and larger devices
+  };
+
+  const wordsPerLine = getWordsPerLine();
+
+  // Split the heading into lines
+  const headingLines = splitHeading(heading, wordsPerLine);
   return (
     <>
       <section
@@ -31,10 +56,17 @@ const HeroSection = ({ diseaseInfo }) => {
               <div className="row">
                 <div
                   className="d-none d-sm-block hero-header"
-                  style={{ height: "400px" }}
+                  style={{ height: "400px",display:'flex ',flexDirection: 'column',justifyContent:"center"}}
                 >
                   <div>
-                    <h1>{heading}</h1>
+                    <h1>
+                      {headingLines.map((line, index) => (
+                        <React.Fragment key={index}>
+                          {line}
+                          {index !== headingLines.length - 1 && <br />}
+                        </React.Fragment>
+                      ))}
+                    </h1>
                   </div>
                   <div className="col-md-7" style={{ position: "relative" }}>
                     {/* Optional image, can uncomment if needed */}
@@ -49,14 +81,13 @@ const HeroSection = ({ diseaseInfo }) => {
                 </div>
               </div>
             </div>
-
             <div
               className="col-12 d-md-none d-block"
               style={{ padding: "0px" }}
             >
               <div className="col-md-12 d-md-none d-block hero-header home mob-hero-bg">
                 <Image
-                  src="/img/mob-banner-so-min.webp"
+                  src="/img/"
                   alt="bg image"
                   layout="fill"
                   objectFit="cover"
@@ -71,7 +102,7 @@ const HeroSection = ({ diseaseInfo }) => {
                 >
                   <div></div>
                   <div style={{ textAlign: "center", marginTop: "0" }}>
-                    <Link href={`tel:9437751812`}>
+                    {/* <Link href={`tel:9437751812`}>
                       <Image
                         src={Free}
                         alt="test"
@@ -80,12 +111,11 @@ const HeroSection = ({ diseaseInfo }) => {
                         width={0}
                         priority={false}
                       />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
             </div>
-
             {/* Hero Bottom center bar */}
             <div className="col-md-12 d-md-none d-block">
               <div

@@ -116,7 +116,7 @@ export const tabsData = {
   psoriasis: {
     url: "psoriasis",
     eventKey: "psoriasis-overview",
-    title: "Homeopathy Treatment for Psoriasis",
+    title: "Psoriasis",
 
     tabs: [
       {
