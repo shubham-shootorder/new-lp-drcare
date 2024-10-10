@@ -586,3 +586,11 @@ footer p{
 .doc-card .text-block h3{
   color:black !important;
 }
+.doc-card .text-block{
+  bottom:80px !important;
+  background-color:#F0FBFF;
+  padding:10px 10px !important;
+  left:0px !important;
+  border:none !important;
+
+}

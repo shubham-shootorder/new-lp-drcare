@@ -22,10 +22,10 @@ const IVFSpecialists = ({ service }) => {
                 width={366}
                 height={438}
               />
-              <div className="text-block" style={{color:"#000000"}}>
+              <div className="text-block text-center" style={{color:"#000000"}}>
                 <h3>Dr. A M Reddy</h3>
                 <p className="">
-                  Co - Founder & Medical <br />
+                  Co - Founder & Medical
                   Director
                 </p>
               </div>
