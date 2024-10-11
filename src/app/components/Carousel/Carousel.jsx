@@ -7,7 +7,7 @@ const Carousel = ({ carouselData,title }) => {
     <section id="choose-fertility" className="section-heading-so">
       <div className="container">
         <h2 className="heading-text text-center mb-3">
-         Homeopathic Treatment For {title}
+        Why DR Care Homeopathic Treatment For {title}
         </h2>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
           {carouselData?.map((item, index) => (

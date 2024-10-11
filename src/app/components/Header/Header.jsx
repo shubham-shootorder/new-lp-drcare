@@ -25,7 +25,7 @@ const Header = () => {
                     +91 9011516694
                   </a>
                   &nbsp; &nbsp;
-                  <a
+                  {/* <a
                     href={`https://api.whatsapp.com/send/?phone=7992979929&text&app_absent=0`}
                     className="whatsupchat"
                     target="_blank"
@@ -38,7 +38,7 @@ const Header = () => {
                       width={36}
                       height={36}
                     />
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

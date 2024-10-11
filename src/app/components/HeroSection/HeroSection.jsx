@@ -6,6 +6,7 @@ import StatisticBar from "./StatisticBar";
 import LeadForm from "../LeadForm/LeadForm";
 import "./FreeBanner.css";
 import { splitHeading } from "@/utils/splitHeading";
+import free from '../../../../public/img/Free-001.png'
 
 const HeroSection = ({ diseaseInfo }) => {
   const { heading, imageUrl } = diseaseInfo; // Destructure heading and imageUrl from diseaseInfo
@@ -70,13 +71,13 @@ const HeroSection = ({ diseaseInfo }) => {
                   </div>
                   <div className="col-md-7" style={{ position: "relative" }}>
                     {/* Optional image, can uncomment if needed */}
-                    {/* <Image
-                      src={Free}
+                    <Image
+                      src={free}
                       alt="test"
                       height={0}
                       width={300}
                       style={{ position: "relative", left: "0px", top: "30px" }}
-                    /> */}
+                    />
                   </div>
                 </div>
               </div>

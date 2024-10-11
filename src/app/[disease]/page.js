@@ -15,7 +15,8 @@ import FertilitySection from "@/app/components/NewFertilitySection/FertilitySect
 import { tabsData } from "@/data/tabsData";
 import testimonials from "@/testimonials";
 import IVFSpecialists from "../components/BestDoctors/IVFSpecialists";
-
+import BeforeAfter from "../components/beforeAfter/BeforeAfter";
+import { beforeAfter } from "@/data/before-after";
 
 // Generate static parameters for valid diseases
 export function generateStaticParams() {
@@ -38,7 +39,7 @@ export default function Page({ params }) {
   const currentDisease = tabsData[disease];
   const { title, tabs, carousel } = currentDisease;
 
-  // Filter testimonials based on the current disease slug
+  // Optionally filter testimonials based on the current disease slug
   // const filteredReview = testimonials.filter(
   //   (testimonial) => testimonial.disease === disease
   // );
@@ -53,7 +54,14 @@ export default function Page({ params }) {
       <Carousel carouselData={carousel} title={title} />
       <Review filteredReview={testimonials} />
       <TrustedIVFClinic />
-      <IVFSpecialists/>
+      
+      {/* Conditional Rendering */}
+      {disease.toLowerCase() === "psoriasis" ? (
+        <BeforeAfter beforeAfter={beforeAfter} />
+      ) : (
+        <IVFSpecialists />
+      )}
+
       <FAQsSection />
       <FloatingButton />
       <FloatBottom />
