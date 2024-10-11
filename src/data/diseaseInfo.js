@@ -6,6 +6,7 @@ const diseasesInfo = [
     content:
       "Discover holistic approaches to managing psoriasis with natural remedies and individualized homeopathic treatments that target the root causes of your skin condition.",
     imageUrl: "/img/psoriasis-banner.jpg", // Replace with actual image URL
+    mobileImgUrl:"/img/mobile-banner-pscoriasis.png",
   },
   {
     slug: "diabetes-mellitus",
@@ -13,6 +14,7 @@ const diseasesInfo = [
     content:
       "Learn how homeopathy can support diabetes management by balancing blood sugar levels and improving overall health with personalized treatment plans.",
     imageUrl: "/img/diabetes-banner-main.jpg", // Replace with actual image URL
+    mobileImgUrl:"",
   },
   {
     slug: "asthma",

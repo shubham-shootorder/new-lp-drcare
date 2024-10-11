@@ -1,20 +1,19 @@
-"use client"
+"use client";
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import { register } from "swiper/element/bundle";
 
-
-const BeforeAfter = ({beforeAfter}) => {
+const BeforeAfter = ({ beforeAfter }) => {
   const swiperElRef = useRef(null);
 
   useEffect(() => {
     const swiperContainer = swiperElRef.current;
     const params = {
       navigation: {
-        nextEl: ".swiper-button-next-1",
-        prevEl: ".swiper-button-prev-1",
+        // nextEl: ".swiper-button-next-1",
+        // prevEl: ".swiper-button-prev-1",
       },
-      pagination: true,
+      pagination: false,
       injectStyles: [
         `
           .swiper-button-next-1,
@@ -29,27 +28,6 @@ const BeforeAfter = ({beforeAfter}) => {
             box-shadow: 0 3.583px 3.583px 0 #6f62780d;
             height: 30px;
           }
-          .swiper-button-prev-1 {
-            background-image: url("/img/icons/box-arrow-in-left.svg");
-            position: absolute;
-            top: 50%;
-            left: -40px;
-            width: 45px;
-            height: 45px;
-            transform: translateY(-50%);
-            margin-top: 0px;
-          }
-
-          .swiper-button-next-1 {
-            background-image: url("/img/icons/box-arrow-in-right.svg");
-            margin-top: 0px;
-            position: absolute;
-            top: 50%;
-            right: -40px;
-            width: 45px;
-            height: 45px;
-            transform: translateY(-50%);
-          }
           .swiper-button-next-1::after,
           .swiper-button-prev-1::after {
             content: "";
@@ -58,14 +36,14 @@ const BeforeAfter = ({beforeAfter}) => {
           .swiper-button-prev-1 svg {
             display: none;
           }
-          .swiper-pagination-bullet{
+          .swiper-pagination-bullet {
             display: none;
           }
         `,
       ],
     };
 
-    Object.assign(swiperContainer, params);
+   
     swiperContainer.initialize();
   }, []);
 
@@ -80,7 +58,7 @@ const BeforeAfter = ({beforeAfter}) => {
           <div className="before-after-slider">
             <swiper-container
               ref={swiperElRef}
-              slides-per-view="1"
+              slides-per-view="auto" // Change to "auto"
               init="false"
               navigation="true"
               pagination="false"
@@ -88,15 +66,16 @@ const BeforeAfter = ({beforeAfter}) => {
               breakpoints={JSON.stringify({ 768: { slidesPerView: 3 } })}
             >
               {beforeAfter.map((item) => (
-                <swiper-slide key={item.id}>
+                <swiper-slide key={item.id} style={{ width: "auto" }}> {/* Set width to auto */}
                   <div className="item">
                     <div className="before-after-images">
                       <Image
                         loading="lazy"
                         src={item.imageUrlBefore}
                         alt={`${item.title} Before`}
-                        width={300}
-                        height={300}
+                        layout="responsive" // Use responsive layout
+                        width={300} // Use a reasonable width for your design
+                        height={300} // Use a reasonable height for your design
                       />
                     </div>
                   </div>

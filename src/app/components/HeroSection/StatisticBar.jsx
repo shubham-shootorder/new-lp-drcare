@@ -11,7 +11,7 @@ const StatisticBar = () => {
           <div className="col-md-3 col-6 pt-2 pb-2">
             <h3>
               <div data-from="0" data-to="44">
-                44Lakhs
+                44 Lakhs
               </div>{" "}
              
             </h3>

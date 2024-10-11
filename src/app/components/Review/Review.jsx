@@ -74,7 +74,7 @@ const Review = ({ filteredReview }) => {
       <div className="container">
         <div className="d-none d-md-none d-lg-block">
           <h2 className="heading-text" data-aos="zoom-in">
-            Hear from what our patients say.
+            Hear from our patients.
           </h2>
         </div>
         <div className="hedy d-block d-md-none noth moth">

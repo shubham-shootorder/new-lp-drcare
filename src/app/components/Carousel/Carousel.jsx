@@ -23,7 +23,7 @@ const Carousel = ({ carouselData,title }) => {
                 </div>
                 <div className="card-body">
                   <p className="card-title avail-emi">{item.title}</p>
-                  <p className="card-text">
+                  <p className="card-text" style={{fontSize:"15px"}}>
                     {/* Use dangerouslySetInnerHTML if `text` contains HTML tags */}
                     <span dangerouslySetInnerHTML={{ __html: item.text }} />
                   </p>

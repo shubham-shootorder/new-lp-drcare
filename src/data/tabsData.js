@@ -135,7 +135,7 @@ export const tabsData = {
                 psoriasis treatment to the patient. The homeopathic treatment
                 for psoriasis is completely patient-centric keeping in view
                 providing holistic treatment and homeopathy medicine without any
-                complications.At Dr care Homeopathy, Homeopathy doctors are
+                complications. At Dr care Homeopathy, Homeopathy doctors are
                 highly skilled and experienced in handling critical conditions
                 of psoriasis including,
                 <ul>
