@@ -9,34 +9,28 @@ import { splitHeading } from "@/utils/splitHeading";
 import free from '../../../../public/img/Free-001.png';
 
 const HeroSection = ({ diseaseInfo }) => {
-  const { heading, imageUrl, mobileImgUrl } = diseaseInfo; // Destructure heading and imageUrl from diseaseInfo
+  const { heading, imageUrl, mobileImgUrl } = diseaseInfo; 
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Set initial window width
       setWindowWidth(window.innerWidth);
 
-      // Handler to update window width on resize
       const handleResize = () => setWindowWidth(window.innerWidth);
 
       window.addEventListener("resize", handleResize);
 
-      // Cleanup event listener on unmount
       return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
 
-  // Determine words per line based on window width
   const getWordsPerLine = () => {
-    if (windowWidth < 576) return 2; // Extra small devices
-    if (windowWidth < 768) return 2; // Small devices
-    return 3; // Medium and larger devices
+    if (windowWidth < 576) return 2;
+    if (windowWidth < 768) return 2;
+    return 3;
   };
 
   const wordsPerLine = getWordsPerLine();
-
-  // Split the heading into lines
   const headingLines = splitHeading(heading, wordsPerLine);
 
   return (
@@ -44,7 +38,7 @@ const HeroSection = ({ diseaseInfo }) => {
       <section
         className="hero-banner"
         style={{
-          backgroundImage: windowWidth < 768 ? `url(${mobileImgUrl})` : `url(${imageUrl})`, // Use mobile image for small devices
+          backgroundImage: windowWidth >= 768 ? `url(${imageUrl})` : "none", 
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -54,14 +48,67 @@ const HeroSection = ({ diseaseInfo }) => {
       >
         <div className="container">
           <div className="row align-items-start">
-            {/* Hero Heading */}
-            <div className="col-md-8">
-              <div className="row">
-                <div
-                  className="d-sm-block hero-header"
-                  style={{ height: "600px", display: 'flex', flexDirection: 'column', justifyContent: "center" }}
-                >
-                  <div>
+
+            {/* Mobile image with heading overlay */}
+            {windowWidth < 768 && (
+              <div className="col-12 d-md-none" style={{ position: "relative", padding: "0px" }}>
+                {/* Mobile image */}
+                <div className="hero-header home mob-hero-bg">
+                  <Image
+                    src={mobileImgUrl}
+                    alt="Mobile Background"
+                    width={600}
+                    height={800}
+                    objectFit="cover"
+                    objectPosition="center"
+                    priority={true}
+                    style={{ zIndex: "-1" }}
+                  />
+                </div>
+                
+                {/* Heading overlay */}
+                <div style={{
+                  position: "absolute", 
+                  bottom: "-75%", 
+                  left: "50%", 
+                  transform: "translate(-50%, -50%)", 
+                  textAlign: "center", 
+                  color: "#fff",
+                  padding: "10px",
+                  width: "100%",
+                  zIndex: "1"
+                }}>
+                  <h1>
+                    {headingLines.map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        {index !== headingLines.length - 1 && <br />}
+                      </React.Fragment>
+                    ))}
+                  </h1>
+
+                  {/* Free image below heading */}
+                  <div style={{ marginTop: "196px" }}>
+                    <Image
+                      src={free}
+                      alt="Free offer"
+                      width={300}
+                      height={0}
+                      style={{ margin: "0 auto" }}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Desktop view heading */}
+            {windowWidth >= 768 && (
+              <div className="col-md-8">
+                <div className="row">
+                  <div
+                    className="d-sm-block hero-header"
+                    style={{ height: "400px", display: 'flex', flexDirection: 'column', justifyContent: "center" }}
+                  >
                     <h1>
                       {headingLines.map((line, index) => (
                         <React.Fragment key={index}>
@@ -70,37 +117,19 @@ const HeroSection = ({ diseaseInfo }) => {
                         </React.Fragment>
                       ))}
                     </h1>
-                  </div>
-                  <div className="col-md-7" style={{ position: "relative" }}>
-                    <Image
-                      src={free}
-                      alt="test"
-                      height={0}
-                      width={300}
-                      style={{ position: "relative", left: "0px", top: "30px" }}
-                    />
+                    <div className="col-md-7" style={{ position: "relative" }}>
+                      <Image
+                        src={free}
+                        alt="test"
+                        height={0}
+                        width={300}
+                        style={{ position: "relative", left: "0px", top: "30px" }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Only show mobile image on small screens */}
-            {/* {windowWidth < 768 && (
-              <div className="col-12 d-md-none" style={{ padding: "0px" }}>
-                <div className="hero-header home mob-hero-bg">
-                  <Image
-                    src={mobileImgUrl}
-                    alt="bg image"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center"
-                    quality={50}
-                    priority={true}
-                    style={{ zIndex: "-1" }}
-                  />
-                </div>
-              </div>
-            )} */}
+            )}
 
             {/* Hero Bottom center bar */}
             <div className="col-md-12 d-md-none d-block">
@@ -109,9 +138,9 @@ const HeroSection = ({ diseaseInfo }) => {
                 data-aos="fade-up"
                 style={{ margin: "0 auto" }}
               >
-                <div className="col-3">
+                <div className="col-3 d-flex flex-column justify-content-center align-items-center">
                   <h3>33+</h3>
-                  <p>Clinics</p>
+                  <p >Clinics</p>
                 </div>
                 <div className="col-3">
                   <div className="hedy d-block d-md-none noth moth">

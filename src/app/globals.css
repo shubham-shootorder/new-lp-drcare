@@ -1,5 +1,7 @@
 @import '../tailwind.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 .header {
   position: fixed;
@@ -596,4 +598,36 @@ footer p{
 }
 .swiper-button-next, .swiper-button-prev{
   display: none !important;
+}
+
+@media (max-width: 580px) {
+  .oasis-stats {
+      width: 90vw;
+      margin: 0 2vw;
+      margin-top: 140px !important;
+  }
+}
+
+
+/* Custom styles for the slider arrows */
+.slick-prev,
+.slick-next {
+ 
+}
+
+.slick-prev {
+  left: -50px; /* Position the previous arrow */
+}
+
+.slick-next {
+  right: -50px; /* Position the next arrow */
+}
+
+/* Optional: Adjust arrow hover styles */
+.slick-prev:hover,
+.slick-next:hover {
+  color: #d96a1e !important; /* Darker orange on hover */
+}
+.slick-prev:before, .slick-next:before{
+  color:#d96a1e !important;
 }

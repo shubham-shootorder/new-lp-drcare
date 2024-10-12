@@ -1,13 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import NotificationBar from "./NotificationBar";
 
 const Header = () => {
-  // const phoneNumber = phone.replace('tel:', '');
   return (
     <>
       <div className="header">
-        {/* <NotificationBar center={center} /> */}
         <header>
           <nav className="navbar">
             <div className="container align-items-center">
@@ -25,9 +22,10 @@ const Header = () => {
                     +91 8019690003
                   </a>
                   &nbsp; &nbsp;
-                  {/* <a
-                    href={`https://api.whatsapp.com/send/?phone=7992979929&text&app_absent=0`}
-                    className="whatsupchat"
+                  {/* WhatsApp icon - Visible on mobile only */}
+                  <a
+                    href={`https://api.whatsapp.com/send/?phone=8019690003&text&app_absent=0`}
+                    className="whatsupchat d-block d-md-none"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -38,7 +36,7 @@ const Header = () => {
                       width={36}
                       height={36}
                     />
-                  </a> */}
+                  </a>
                 </div>
               </div>
             </div>

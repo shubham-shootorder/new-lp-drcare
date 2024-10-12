@@ -16,7 +16,7 @@ footer .foo-bottom p {
     .oasis-stats {
         width: 90vw;
         margin: 0 2vw;
-        margin-top: -50px !important;
+        margin-top: 90px !important;
     }
 
     .oasis-stats h3 {
@@ -203,7 +203,7 @@ footer .foo-bottom p {
     .oasis-stats {
         width: 90vw;
         margin: 0 2vw;
-        margin-top: -35px;
+        margin-top: 90px;
     }
 }
 
@@ -211,7 +211,7 @@ footer .foo-bottom p {
 @media (min-width: 768px) and (max-width: 1024px) {
     .oasis-stats {
         margin: 0 0;
-        margin-top: -40px;
+        margin-top: 50px;
     }
 }
 
