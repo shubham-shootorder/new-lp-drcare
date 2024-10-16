@@ -1244,7 +1244,6 @@ export const tabsData = {
                   <li>Metabolic disorders</li>
                   <li>Misaligned pelvic and bone structures</li>
                   {/* Other list items */}
-
                   <li>Bone and spinal tumors</li>
                   <li>Prostate cancer</li>
                   <li>Depression</li>

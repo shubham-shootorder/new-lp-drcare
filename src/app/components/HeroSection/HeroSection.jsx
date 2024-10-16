@@ -69,7 +69,7 @@ const HeroSection = ({ diseaseInfo }) => {
                 {/* Heading overlay */}
                 <div style={{
                   position: "absolute", 
-                  bottom: "-75%", 
+                  bottom: "-77%", 
                   left: "50%", 
                   transform: "translate(-50%, -50%)", 
                   textAlign: "center", 
