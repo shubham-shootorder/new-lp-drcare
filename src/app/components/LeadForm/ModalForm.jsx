@@ -135,6 +135,8 @@ const LeadForm = ({}) => {
       router.push("/thankyou");
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
+      setIsSubmitting(false);
+      setShowErrorMessage(true); // Show error message
     }
   };
 
@@ -172,21 +174,35 @@ const LeadForm = ({}) => {
               />
             </div>
 
-            <div className="mb-3">
-              <input
-                placeholder="Mobile Number"
-                type="text"
-                className="form-control"
-                id="mobile"
-                name="mobile"
-                minLength="13"
-                maxLength="13"
-                value={mobile}
-                onChange={handleMobileChange}
-                onKeyDown={handleKeyDown}
-                ref={mobileInputRef}
-                required
-              />
+            <div className="mb-3 row">
+              <div className="col-6">
+                <input
+                  placeholder="Mobile Number"
+                  type="text"
+                  className="form-control"
+                  id="mobile"
+                  name="mobile"
+                  minLength="13"
+                  maxLength="13"
+                  value={mobile}
+                  onChange={handleMobileChange}
+                  onKeyDown={handleKeyDown}
+                  ref={mobileInputRef}
+                  required
+                />
+              </div>
+              <div className="col-6">
+                <input
+                  placeholder="City"
+                  type="text"
+                  className="form-control"
+                  id="city"
+                  name="city"
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                  required
+                />
+              </div>
             </div>
 
             <div className="mb-3">
@@ -224,20 +240,6 @@ const LeadForm = ({}) => {
                   </select>
                 </div>
               </div>
-            </div>
-
-            {/* City Field - Changed to input */}
-            <div className="mb-3">
-              <input
-                placeholder="City"
-                type="text"
-                className="form-control"
-                id="city"
-                name="city"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                required
-              />
             </div>
 
             {/* Health Problem Field */}
@@ -281,6 +283,12 @@ const LeadForm = ({}) => {
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </form>
+
+          {showErrorMessage && (
+            <div className="alert alert-danger" role="alert">
+              There was a problem submitting the form. Please try again.
+            </div>
+          )}
         </div>
       </div>
     </>

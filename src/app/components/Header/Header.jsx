@@ -1,7 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import { Modal } from "react-bootstrap";
+import ModalForm from "../LeadForm/ModalForm";
 
 const Header = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = () => setShowModal(true);
+
   return (
     <>
       <div className="header" style={{ backgroundColor: "red" }}>
@@ -24,13 +32,13 @@ const Header = () => {
                   &nbsp; &nbsp;
 
                   {/* Book an Appointment button */}
-                  <a
-                    href="#book-appointment" // Replace with your booking link or section ID
+                  <button
+                    onClick={handleShow} // Add the onClick event here
                     className="btn btn-oasis-submit d-md-block d-none" // Adjust the button styling as needed
                     style={{ backgroundColor: "#FF0329", color: "white", padding: "8px 16px", borderRadius: "5px" }}
                   >
-                    Book An Appointment
-                  </a>
+                    Book Appointment
+                  </button>
 
                   {/* WhatsApp icon - Visible on mobile only */}
                   <a
@@ -52,6 +60,18 @@ const Header = () => {
             </div>
           </nav>
         </header>
+        <Modal show={showModal} onHide={handleClose} style={{ zIndex: "99999" }}>
+          <Modal.Header closeButton>
+            <h5 className="modal-title text-center" style={{ color: "#111" }}>
+              Book Appointment
+            </h5>
+          </Modal.Header>
+          <Modal.Body>
+            <ModalForm
+              service="ivf"
+            />
+          </Modal.Body>
+        </Modal>
       </div>
     </>
   );
