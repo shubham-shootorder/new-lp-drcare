@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 
 const LeadForm = ({}) => {
@@ -16,148 +15,87 @@ const LeadForm = ({}) => {
       setUrlPath(window.location.pathname);
     }
   }, []);
-  // Form Lead
+
   const [fullname, setFullname] = useState("");
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState(""); // Updated for text input
   const [age, setAge] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(true);
-  const [ageOptions, setAgeOptions] = useState([]);
-
   const [mobile, setMobile] = useState("+91");
   const mobileInputRef = useRef(null);
+  const [city, setCity] = useState(""); // New state for City
+  const [healthProblem, setHealthProblem] = useState(""); // New state for health problem description
 
   const handleMobileChange = (e) => {
     let value = e.target.value;
-
     if (value.length < 3) {
       value = "+91";
     } else if (!value.startsWith("+91")) {
       value = "+91" + value.replace(/^\+91/, "");
     }
-
     setMobile(value);
 
-    // Update cursor position to ensure it doesn't go before the prefix
     const cursorPosition = mobileInputRef.current.selectionStart;
     setTimeout(() => {
       if (cursorPosition < 3) {
         mobileInputRef.current.setSelectionRange(3, 3);
       } else {
-        mobileInputRef.current.setSelectionRange(
-          cursorPosition,
-          cursorPosition
-        );
+        mobileInputRef.current.setSelectionRange(cursorPosition, cursorPosition);
       }
     }, 0);
   };
 
   const handleKeyDown = (e) => {
     const cursorPosition = mobileInputRef.current.selectionStart;
-    // Disable backspace if cursor is at the start of the input
     if (cursorPosition <= 3 && e.key === "Backspace") {
       e.preventDefault();
     }
   };
-  const handleGenderChange = (e) => {
-    const selectedGender = e.target.value;
-    setGender(selectedGender);
-    updateAgeOptions(selectedGender);
-  };
 
-  const handleAgeChange = (e) => {
-    setAge(e.target.value);
-  };
-
-  const updateAgeOptions = (selectedGender) => {
-    let options = [];
-    if (selectedGender === "Male") {
-      options = generateAgeOptions(25, 45);
-    } else if (selectedGender === "Female") {
-      options = generateAgeOptions(20, 45);
-    }
-    setAgeOptions(options);
-  };
-
-  const generateAgeOptions = (start, end) => {
-    let options = [];
-    for (let i = start; i <= end; i++) {
-      options.push(i);
-    }
-    return options;
-  };
-
-  const handleTermsChange = (e) => {
-    setTermsAccepted(e.target.checked);
-  };
-
-  const stripPrefix = (number) => {
-    return number.replace(/^\+91/, "");
-  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    console.log("function is working properly");
-    // Extract values from form fields
+
     const fullname = document.getElementById("fullname").value;
     const mobile = document.getElementById("mobile").value;
     const gender = document.getElementById("gender").value;
     const age = document.getElementById("age").value;
     const urlParams = new URLSearchParams(window.location.search);
-    let sourceUtm = urlParams.get("utm_source");
-    let mediumUtm = urlParams.get("utm_medium");
-    let campaignUtm = urlParams.get("utm_campaign");
-    let contentUtm = urlParams.get("utm_content");
-    let termUtm = urlParams.get("utm_term");
-    let campaignIdUtm = urlParams.get("campaignid");
 
-    // If UTM parameters are null, set them to empty strings
-    sourceUtm = sourceUtm ? sourceUtm : "";
-    mediumUtm = mediumUtm ? mediumUtm : "";
-    campaignUtm = campaignUtm ? campaignUtm : "";
-    contentUtm = contentUtm ? contentUtm : "";
-    termUtm = termUtm ? termUtm : "";
-    campaignIdUtm = campaignIdUtm ? campaignIdUtm : "";
+    let sourceUtm = urlParams.get("utm_source") || "";
+    let mediumUtm = urlParams.get("utm_medium") || "";
+    let campaignUtm = urlParams.get("utm_campaign") || "";
+    let contentUtm = urlParams.get("utm_content") || "";
+    let termUtm = urlParams.get("utm_term") || "";
 
     try {
       const response = await axios.post("/api/data", {
-        // Changed endpoint to match your API route
         full_name: fullname,
         phone: mobile,
-        others: `gender is ${gender} and age is ${age}`, // Store additional info
-        service: urlPath, // Ensure `urlPath` is defined appropriately
+        others: `gender is ${gender} and age is ${age} city is ${city} health problem is ${healthProblem}`,
+        service: urlPath,
         utm_source: sourceUtm,
         utm_medium: mediumUtm,
         utm_campaign: campaignUtm,
         utm_content: contentUtm,
         utm_term: termUtm,
       });
-      console.log(response);
-      // toast.success("Form submitted successfully!")
+
       setIsSubmitting(false);
       router.push("/thankyou");
-     
     } catch (error) {
-      // toast.error("There was a problem with the form submission.");
-      console.error("There was a problem with the fetch operation:", error);
+      console.error("There was a problem with the form submission:", error);
+      setIsSubmitting(false);
     }
   };
 
   return (
     <>
-      {/* <Toaster toastOptions={{ style: { zIndex: 10000000 } }} /> */}
       <div className="col-md-4 oasis-startjour frm">
         <h1 className="heading-text pb-2 d-md-none d-block" data-aos="zoom-in">
-          {/* Affordable {service ? service.toUpperCase() : "IVF"} Cost */}
           Free Consultation
         </h1>
-
         <div className="oasis-form" data-aos="fade-up">
-          <h1
-            className="heading-text pt-4 pb-1 d-none d-md-block"
-            style={{ fontSize: "27px" }}
-            data-aos="zoom-in"
-          >
-            {/* Affordable {service ? service.toUpperCase() : "IVF"} Cost */}
+          <h1 className="heading-text pt-4 pb-1 d-none d-md-block" style={{ fontSize: "27px" }} data-aos="zoom-in">
             Free Consultation
           </h1>
           <form onSubmit={handleSubmit}>
@@ -165,6 +103,7 @@ const LeadForm = ({}) => {
             <input type="hidden" name="utm_source" id="utm_source" />
             <input type="hidden" name="utm_campaign" id="utm_campaign" />
             <input type="hidden" name="utm_medium" id="utm_medium" />
+
             <div className="mb-3">
               <input
                 placeholder="Full Name"
@@ -177,59 +116,81 @@ const LeadForm = ({}) => {
                 required
               />
             </div>
-            <div className="mb-3">
-              <input
-                placeholder="Mobile Number"
-                type="text"
-                className="form-control"
-                id="mobile"
-                name="mobile"
-                minLength="13"
-                maxLength="13"
-                value={mobile}
-                onChange={handleMobileChange}
-                onKeyDown={handleKeyDown}
-                ref={mobileInputRef}
-                required
-              />
+
+            <div className="row mb-3">
+              <div className="col-6">
+                <input
+                  placeholder="Mobile Number"
+                  type="text"
+                  className="form-control"
+                  id="mobile"
+                  name="mobile"
+                  minLength="13"
+                  maxLength="13"
+                  value={mobile}
+                  onChange={handleMobileChange}
+                  onKeyDown={handleKeyDown}
+                  ref={mobileInputRef}
+                  required
+                />
+              </div>
+
+              <div className="col-6">
+                <input
+                  placeholder="City"
+                  type="text"
+                  className="form-control"
+                  id="city"
+                  name="city"
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                  required
+                />
+              </div>
             </div>
 
             <div className="mb-3">
               <div className="row">
                 <div className="col">
-                  <select
-                    className="form-select"
-                    name="gender"
+                  <input
+                    placeholder="Gender"
+                    type="text"
+                    className="form-control"
                     id="gender"
-                    required
-                    onChange={handleGenderChange}
+                    name="gender"
                     value={gender}
-                  >
-                    <option value="">Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                  </select>
+                    onChange={(e) => setGender(e.target.value)}
+                    required
+                  />
                 </div>
                 <div className="col">
-                  <select
-                    className="form-select"
+                  <input
+                    placeholder="Age"
+                    type="text"
+                    className="form-control"
                     id="age"
                     name="age"
-                    required
                     value={age}
-                    onChange={handleAgeChange}
-                    disabled={!gender}
-                  >
-                    <option value="">Age</option>
-                    {ageOptions.map((option, index) => (
-                      <option key={index} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
+                    onChange={(e) => setAge(e.target.value)}
+                    required
+                  />
                 </div>
               </div>
             </div>
+
+            <div className="mb-3">
+              <textarea
+                placeholder="Describe Your Health Problem"
+                className="form-control"
+                id="healthProblem"
+                name="healthProblem"
+                rows="3"
+                value={healthProblem}
+                onChange={(e) => setHealthProblem(e.target.value)}
+                required
+              />
+            </div>
+
             <center>
               <div className="mb-3 form-check">
                 <input
@@ -240,39 +201,24 @@ const LeadForm = ({}) => {
                   id="exampleCheck1"
                   required
                   checked={termsAccepted}
-                  onChange={handleTermsChange}
+                  onChange={(e) => setTermsAccepted(e.target.checked)}
                 />
                 <label className="form-check-label" htmlFor="exampleCheck1">
                   I consent Dr Care to contact me
                 </label>
               </div>
+
+              {showErrorMessage && <p style={{ color: "red" }}>Please accept the consent.</p>}
             </center>
+
             <button
               type="submit"
-              id="form-submit"
               className="btn btn-oasis-submit mb-4"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Loading..." : "Request call back!"}
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </form>
-
-          {showErrorMessage && (
-            <>
-              <p
-                style={{
-                  color: "#FF0329",
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  padding: "10px",
-                  padding: "0 10px 10px 10px",
-                  fontSize: "12px",
-                }}
-              >
-                Error in submission! Please call
-              </p>
-            </>
-          )}
         </div>
       </div>
     </>

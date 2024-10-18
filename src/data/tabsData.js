@@ -7,6 +7,18 @@ export const tabsData = {
     title: " Diabetes Mellitus",
     tabs: [
       {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy is a system of alternative medicine based on the principle of like cures like—the idea that substances that cause symptoms in a healthy person can, in extremely small amounts, treat similar symptoms in a sick person. While it is popular with many, there are several factors to consider when evaluating why some believe homeopathy to be the best choice for their health.",
+          },
+          // Additional content
+        ],
+      },
+      {
         eventKey: "infertility-testing",
         title: "Overview",
         content: [
@@ -119,6 +131,18 @@ export const tabsData = {
     title: "Psoriasis",
 
     tabs: [
+      {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy is a system of alternative medicine based on the principle of like cures like—the idea that substances that cause symptoms in a healthy person can, in extremely small amounts, treat similar symptoms in a sick person. While it is popular with many, there are several factors to consider when evaluating why some believe homeopathy to be the best choice for their health.",
+          },
+          // Additional content
+        ],
+      },
       {
         eventKey: "psoriasis-overview",
         title: "Overview",
@@ -331,6 +355,18 @@ export const tabsData = {
     title: "Asthma",
     tabs: [
       {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy is a system of alternative medicine based on the principle of like cures like—the idea that substances that cause symptoms in a healthy person can, in extremely small amounts, treat similar symptoms in a sick person. While it is popular with many, there are several factors to consider when evaluating why some believe homeopathy to be the best choice for their health.",
+          },
+          // Additional content
+        ],
+      },
+      {
         eventKey: "asthma-overview",
         title: "Overview",
         content: [
@@ -477,6 +513,18 @@ export const tabsData = {
     title: " Kidney Stone(Nephrolithiasis)",
     tabs: [
       {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy is a system of alternative medicine based on the principle of like cures like—the idea that substances that cause symptoms in a healthy person can, in extremely small amounts, treat similar symptoms in a sick person. While it is popular with many, there are several factors to consider when evaluating why some believe homeopathy to be the best choice for their health.",
+          },
+          // Additional content
+        ],
+      },
+      {
         eventKey: "infertility-testing",
         title: "Overview",
         content: [
@@ -621,6 +669,18 @@ export const tabsData = {
     eventKey: "infertility-testing",
     title: "Thyroid Disorders",
     tabs: [
+      {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy is a system of alternative medicine based on the principle of like cures like—the idea that substances that cause symptoms in a healthy person can, in extremely small amounts, treat similar symptoms in a sick person. While it is popular with many, there are several factors to consider when evaluating why some believe homeopathy to be the best choice for their health.",
+          },
+          // Additional content
+        ],
+      },
       {
         eventKey: "infertility-testing",
         title: "Overview",
@@ -783,6 +843,18 @@ export const tabsData = {
     eventKey: "infertility-testing",
     title: "Gall Stones",
     tabs: [
+      {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy is a system of alternative medicine based on the principle of like cures like—the idea that substances that cause symptoms in a healthy person can, in extremely small amounts, treat similar symptoms in a sick person. While it is popular with many, there are several factors to consider when evaluating why some believe homeopathy to be the best choice for their health.",
+          },
+          // Additional content
+        ],
+      },
       {
         eventKey: "infertility-testing",
         title: "Overview",
@@ -1025,6 +1097,18 @@ export const tabsData = {
     title: "Piles(Hemorrhoids)",
     tabs: [
       {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy is a system of alternative medicine based on the principle of like cures like—the idea that substances that cause symptoms in a healthy person can, in extremely small amounts, treat similar symptoms in a sick person. While it is popular with many, there are several factors to consider when evaluating why some believe homeopathy to be the best choice for their health.",
+          },
+          // Additional content
+        ],
+      },
+      {
         eventKey: "infertility-testing",
         title: "Overview",
         content: [
@@ -1210,6 +1294,18 @@ export const tabsData = {
     eventKey: "infertility-testing",
     title: "Spondylosis",
     tabs: [
+      {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy is a system of alternative medicine based on the principle of like cures like—the idea that substances that cause symptoms in a healthy person can, in extremely small amounts, treat similar symptoms in a sick person. While it is popular with many, there are several factors to consider when evaluating why some believe homeopathy to be the best choice for their health.",
+          },
+          // Additional content
+        ],
+      },
       {
         eventKey: "infertility-testing",
         title: "Overview",

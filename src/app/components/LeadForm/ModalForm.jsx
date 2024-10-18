@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 
 const LeadForm = ({}) => {
@@ -16,12 +15,15 @@ const LeadForm = ({}) => {
       setUrlPath(window.location.pathname);
     }
   }, []);
+
   // Form Lead
   const [fullname, setFullname] = useState("");
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(true);
   const [ageOptions, setAgeOptions] = useState([]);
+  const [city, setCity] = useState("");
+  const [healthProblem, setHealthProblem] = useState("");
 
   const [mobile, setMobile] = useState("+91");
   const mobileInputRef = useRef(null);
@@ -37,7 +39,6 @@ const LeadForm = ({}) => {
 
     setMobile(value);
 
-    // Update cursor position to ensure it doesn't go before the prefix
     const cursorPosition = mobileInputRef.current.selectionStart;
     setTimeout(() => {
       if (cursorPosition < 3) {
@@ -53,11 +54,11 @@ const LeadForm = ({}) => {
 
   const handleKeyDown = (e) => {
     const cursorPosition = mobileInputRef.current.selectionStart;
-    // Disable backspace if cursor is at the start of the input
     if (cursorPosition <= 3 && e.key === "Backspace") {
       e.preventDefault();
     }
   };
+
   const handleGenderChange = (e) => {
     const selectedGender = e.target.value;
     setGender(selectedGender);
@@ -93,11 +94,11 @@ const LeadForm = ({}) => {
   const stripPrefix = (number) => {
     return number.replace(/^\+91/, "");
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    console.log("function is working properly");
-    // Extract values from form fields
+
     const fullname = document.getElementById("fullname").value;
     const mobile = document.getElementById("mobile").value;
     const gender = document.getElementById("gender").value;
@@ -110,7 +111,6 @@ const LeadForm = ({}) => {
     let termUtm = urlParams.get("utm_term");
     let campaignIdUtm = urlParams.get("campaignid");
 
-    // If UTM parameters are null, set them to empty strings
     sourceUtm = sourceUtm ? sourceUtm : "";
     mediumUtm = mediumUtm ? mediumUtm : "";
     campaignUtm = campaignUtm ? campaignUtm : "";
@@ -120,34 +120,28 @@ const LeadForm = ({}) => {
 
     try {
       const response = await axios.post("/api/data", {
-        // Changed endpoint to match your API route
         full_name: fullname,
         phone: mobile,
-        others: `gender is ${gender} and age is ${age}`, // Store additional info
-        service: urlPath, // Ensure `urlPath` is defined appropriately
+        others: `gender is ${gender}, age is ${age}, city is ${city}, health problem: ${healthProblem}`, // Additional info
+        service: urlPath,
         utm_source: sourceUtm,
         utm_medium: mediumUtm,
         utm_campaign: campaignUtm,
         utm_content: contentUtm,
         utm_term: termUtm,
       });
-      console.log(response);
-      // toast.success("Form submitted successfully!")
+
       setIsSubmitting(false);
       router.push("/thankyou");
-     
     } catch (error) {
-      // toast.error("There was a problem with the form submission.");
       console.error("There was a problem with the fetch operation:", error);
     }
   };
 
   return (
     <>
-      {/* <Toaster toastOptions={{ style: { zIndex: 10000000 } }} /> */}
       <div className="col-md-4 oasis-startjour frm">
         <h1 className="heading-text pb-2 d-md-none d-block" data-aos="zoom-in">
-          {/* Affordable {service ? service.toUpperCase() : "IVF"} Cost */}
           Free Consultation
         </h1>
 
@@ -157,7 +151,6 @@ const LeadForm = ({}) => {
             style={{ fontSize: "27px" }}
             data-aos="zoom-in"
           >
-            {/* Affordable {service ? service.toUpperCase() : "IVF"} Cost */}
             Free Consultation
           </h1>
           <form onSubmit={handleSubmit}>
@@ -165,6 +158,7 @@ const LeadForm = ({}) => {
             <input type="hidden" name="utm_source" id="utm_source" />
             <input type="hidden" name="utm_campaign" id="utm_campaign" />
             <input type="hidden" name="utm_medium" id="utm_medium" />
+
             <div className="mb-3">
               <input
                 placeholder="Full Name"
@@ -177,6 +171,7 @@ const LeadForm = ({}) => {
                 required
               />
             </div>
+
             <div className="mb-3">
               <input
                 placeholder="Mobile Number"
@@ -230,6 +225,35 @@ const LeadForm = ({}) => {
                 </div>
               </div>
             </div>
+
+            {/* City Field - Changed to input */}
+            <div className="mb-3">
+              <input
+                placeholder="City"
+                type="text"
+                className="form-control"
+                id="city"
+                name="city"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                required
+              />
+            </div>
+
+            {/* Health Problem Field */}
+            <div className="mb-3">
+              <textarea
+                className="form-control"
+                id="healthProblem"
+                name="healthProblem"
+                placeholder="Describe your health problem"
+                rows="4"
+                value={healthProblem}
+                onChange={(e) => setHealthProblem(e.target.value)}
+                required
+              ></textarea>
+            </div>
+
             <center>
               <div className="mb-3 form-check">
                 <input
@@ -247,32 +271,16 @@ const LeadForm = ({}) => {
                 </label>
               </div>
             </center>
+
             <button
               type="submit"
               id="form-submit"
               className="btn btn-oasis-submit mb-4"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Loading..." : "Request call back!"}
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </form>
-
-          {showErrorMessage && (
-            <>
-              <p
-                style={{
-                  color: "#FF0329",
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  padding: "10px",
-                  padding: "0 10px 10px 10px",
-                  fontSize: "12px",
-                }}
-              >
-                Error in submission! Please call
-              </p>
-            </>
-          )}
         </div>
       </div>
     </>

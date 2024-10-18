@@ -2,11 +2,8 @@
 
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import LeadForm from "../LeadForm/LeadForm";
 import ModalForm from "../LeadForm/ModalForm";
 import Image from "next/image";
-import NotificationBar from "../Header/NotificationBar";
-import ModalFormSF from "../LeadForm/ModalFormSF";
 
 const FloatBottom = ({ center, referal, refId, testlp = false }) => {
   const [show, setShow] = useState(false);
@@ -47,8 +44,8 @@ const FloatBottom = ({ center, referal, refId, testlp = false }) => {
           src="/img/WhatsApp.svg"
           alt="WhatsApp Icon"
           className="img-fluid whatsapp-icon"
-          width={36}
-          height={36}
+          width={60}
+          height={60}
         />
       </a>
 
