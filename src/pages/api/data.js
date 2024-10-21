@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 
     try {
       const directusResponse = await axios.post(
-        `https://app.shootorder.com/items/contacts/?access_token=0wZWayS435edEnwJ_uTf5yJrZkk0t3fI`, // Replace with your Directus endpoint
+        `https://app.shootorder.com/items/contacts/?access_token=0wZWayS435edEnwJ_uTf5yJrZkk0t3fI`,
 
         {
           headers: {

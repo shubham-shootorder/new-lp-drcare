@@ -107,7 +107,7 @@ export default function Page({ params }) {
 
   return (
     <>
-      <Header />
+      <Header diseaseInfo={filteredDisease} />
       <HeroSection diseaseInfo={filteredDisease} />
       {/* Other sections can be added here as necessary */}
       <FertilitySection tabsDataPass={tabs} title={title} />

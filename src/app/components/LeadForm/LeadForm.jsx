@@ -80,6 +80,8 @@ const LeadForm = ({}) => {
         utm_term: termUtm,
       });
 
+      console.log(response)
+
       setIsSubmitting(false);
       router.push("/thankyou");
     } catch (error) {
@@ -87,6 +89,66 @@ const LeadForm = ({}) => {
       setIsSubmitting(false);
     }
   };
+
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  
+  //   // Fetch values from the form
+  //   const fullname = document.getElementById("fullname").value;
+  //   const mobile = document.getElementById("mobile").value;
+  //   const gender = document.getElementById("gender").value;
+  //   const age = document.getElementById("age").value;
+  //   const city = document.getElementById("city").value; // Ensure city exists in the form
+  //   const healthProblem = document.getElementById("healthProblem").value; // Ensure healthProblem exists in the form
+  
+  //   // Fetch UTM parameters from the URL
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   let sourceUtm = urlParams.get("utm_source") || "";
+  //   let mediumUtm = urlParams.get("utm_medium") || "";
+  //   let campaignUtm = urlParams.get("utm_campaign") || "";
+  //   let contentUtm = urlParams.get("utm_content") || "";
+  //   let termUtm = urlParams.get("utm_term") || "";
+  
+  //   // Get the service (assumed it's coming from the path)
+  //   const urlPath = window.location.pathname;
+  
+  //   // Prepare the data payload for the external API
+  //   const data = {
+  //     full_name: fullname,
+  //     phone: mobile,
+  //     others: `gender is ${gender} and age is ${age} city is ${city} health problem is ${healthProblem}`,
+  //     service: urlPath,
+  //     utm_source: sourceUtm,
+  //     utm_medium: mediumUtm,
+  //     utm_campaign: campaignUtm,
+  //     utm_content: contentUtm,
+  //     utm_term: termUtm,
+  //   };
+  
+  //   try {
+  //     // Call the external API directly from the frontend
+  //     const response = await axios.post(
+  //       `https://app.shootorder.com/items/contacts/?access_token=0wZWayS435edEnwJ_uTf5yJrZkk0t3fI`,
+  //       data,
+  //       {
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     );
+  
+  //     console.log(response);
+  
+  //     setIsSubmitting(false);
+  //     router.push("/thankyou");
+  //   } catch (error) {
+  //     console.error("There was a problem with the form submission:", error);
+  //     setIsSubmitting(false);
+  //   }
+  // };
+  
 
   return (
     <>

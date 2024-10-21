@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Modal } from "react-bootstrap";
 import ModalForm from "../LeadForm/ModalForm";
 
-const Header = () => {
+const Header = ({diseaseInfo}) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleClose = () => setShowModal(false);
@@ -27,7 +27,7 @@ const Header = () => {
               <div className="d-flex">
                 <div className="d-flex align-items-center">
                   <a href="tel:+91 7997993400" className="wbtn d-md-block d-none">
-                    +91 7997993400
+                    {diseaseInfo?.phone}
                   </a>
                   &nbsp; &nbsp;
 

@@ -7,6 +7,8 @@ const diseasesInfo = [
       "Discover holistic approaches to managing psoriasis with natural remedies and individualized homeopathic treatments that target the root causes of your skin condition.",
     imageUrl: "/img/psoriasis-banner.jpg", // Replace with actual image URL
     mobileImgUrl:"/img/mobile-banner-pscoriasis.png",
+    phone: "+918557000222",
+    email: "psoriasis@drcarehospitals.com",
   },
   {
     slug: "diabetes-mellitus",
@@ -15,6 +17,8 @@ const diseasesInfo = [
       "Learn how homeopathy can support diabetes management by balancing blood sugar levels and improving overall health with personalized treatment plans.",
     imageUrl: "/img/diabetes-banner-main.jpg", // Replace with actual image URL
     mobileImgUrl:"/img/mobile-banner/diabetes-banner-main-mobile.jpg",
+    phone: "+917997993400",
+    email: "diabetes@drcarehospitals.com",
   },
   {
     slug: "asthma",
@@ -23,6 +27,8 @@ const diseasesInfo = [
       "Explore effective homeopathic remedies for asthma that can help alleviate symptoms, reduce inflammation, and promote better lung health.",
     imageUrl: "/img/asthama.jpg", // Replace with actual image URL
     mobileImgUrl:"/img/mobile-banner/mobile-banner-asthma.jpg",
+    phone: "+917671005000",
+    email: "asthma@drcarehospitals.com",
   },
   {
     slug: "kidney-stones",
@@ -31,6 +37,8 @@ const diseasesInfo = [
       "Find out how homeopathic treatments can ease the pain of kidney stones and support the body’s natural ability to eliminate them without invasive procedures.",
     imageUrl: "/img/kidney-stone-banner.jpg", // Replace with actual image URL
     mobileImgUrl:"/img/mobile-banner/mobile-banner-kidneys.jpg",
+    phone: "+917997996300",
+    email: "kidneystones@drcarehospitals.com",
   },
   {
     slug: "thyroid-disorders",
@@ -39,6 +47,8 @@ const diseasesInfo = [
       "Achieve thyroid health with homeopathy, focusing on balancing hormonal levels and addressing the underlying causes of thyroid imbalances.",
     imageUrl: "/img/thyroid-banner.jpg", // Replace with actual image URL
     mobileImgUrl:"/img/mobile-banner/mobile-banner-thyroid.jpg",
+    phone: "+919703001000",
+    email: "thyroid@drcarehospitals.com",
   },
   {
     slug: "gall-stones",
@@ -47,6 +57,8 @@ const diseasesInfo = [
       "Learn about homeopathic options that can help relieve the discomfort caused by gall bladder stones and promote digestive health.",
     imageUrl: "/img/gall-bladder-banner.jpg", // Replace with actual image URL
     mobileImgUrl:"/img/mobile-banner/mobile-banner-gall-stones.jpg",
+    phone: "+917671005000",
+    email: "gallstones@drcarehospitals.com",
   },
   {
     slug: "piles",
@@ -55,6 +67,8 @@ const diseasesInfo = [
       "Discover effective homeopathic remedies for low back pain that target the root causes and provide long-lasting relief without harsh medications.",
     imageUrl: "/img/piles-banner.jpg", // Replace with actual image URL
     mobileImgUrl:"/img/mobile-banner/mobile-banner-piles.jpg",
+    phone: "+917997993400",
+    email: "hemorrhoids@drcarehospitals.com",
   },
   {
     slug: "spondylosis",
@@ -63,6 +77,8 @@ const diseasesInfo = [
       "Discover effective homeopathic remedies for low back pain that target the root causes and provide long-lasting relief without harsh medications.",
     imageUrl: "/img/Spondylytis-Banner.jpg", // Replace with actual image URL
     mobileImgUrl:"/img/mobile-banner/mobile-banner-spondelities.jpg",
+    phone: "+919703001000",
+    email: "spondylosis@drcarehospitals.com",
   },
 ];
 
