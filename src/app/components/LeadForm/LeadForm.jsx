@@ -79,7 +79,8 @@ const LeadForm = ({}) => {
     const data = {
       full_name: fullname,
       phone: mobile,
-      others: `gender is ${gender} and age is ${age}, city is ${city}, health problem is ${healthProblem}`,
+      others: `gender is ${gender} and age is ${age}, health problem is ${healthProblem}`,
+      location: city,
       service: urlPath,
       utm_source: sourceUtm,
       utm_medium: mediumUtm,
@@ -99,7 +100,7 @@ const LeadForm = ({}) => {
       console.log("Response from PHP API:", response.data);
   
       setIsSubmitting(false);
-      router.push("/thankyou");
+      router.push("/lp/thankyou");
     } catch (error) {
       // Handle errors gracefully
       console.error("There was a problem with the form submission:", error);
