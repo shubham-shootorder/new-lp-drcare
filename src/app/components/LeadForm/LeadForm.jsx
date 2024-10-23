@@ -91,7 +91,7 @@ const LeadForm = ({}) => {
   
     try {
       // Call the PHP API on your server
-      const response = await axios.post("https://positiveautism.com/lead_generation.php", data, {
+      const response = await axios.post("https://drcarehomeopathy.in/lead_generation.php", data, {
         headers: {
           "Content-Type": "application/json",
         },
