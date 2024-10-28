@@ -49,23 +49,11 @@ const FloatingButton = ({center, referal, refId, testlp = false}) => {
           {/* Render the LeadForm component here */}
           {testlp ? (
             <>
-              <ModalFormSF
-                service="ivf"
-                phoneNumber={center?.phone}
-                centerName={center?.center_name}
-                referal={referal}
-                refId={refId}
-              />
+              <LeadForm/>
             </>
           ) : (
             <>
-              <ModalForm
-                service="ivf"
-                phoneNumber={center?.phone}
-                centerName={center?.center_name}
-                referal={referal}
-                refId={refId}
-              />
+              <LeadForm />
             </>
           )}
         </Modal.Body>

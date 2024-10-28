@@ -76,7 +76,7 @@ const HeroSection = ({ diseaseInfo }) => {
                   color: "#fff",
                   padding: "10px",
                   width: "100%",
-                  zIndex: "1"
+                  zIndex: "1",
                 }}>
                   <h1>
                     {headingLines.map((line, index) => (
@@ -104,11 +104,13 @@ const HeroSection = ({ diseaseInfo }) => {
             {/* Desktop view heading */}
             {windowWidth >= 768 && (
               <div className="col-md-8">
+                
                 <div className="row">
                   <div
                     className="d-sm-block hero-header"
                     style={{ height: "400px", display: 'flex', flexDirection: 'column', justifyContent: "center" }}
                   >
+                    
                     <h1>
                       {headingLines.map((line, index) => (
                         <React.Fragment key={index}>

@@ -126,7 +126,7 @@ export default function Page({ params }) {
       {/* Pass the dynamic FAQs to the FAQsSection */}
       <FAQsSection faqs={faqs} />
 
-      <FloatingButton />
+      {/* <FloatingButton /> */}
       <FloatBottom />
       <Footer />
     </>

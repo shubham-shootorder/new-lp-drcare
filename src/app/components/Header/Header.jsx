@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Modal } from "react-bootstrap";
 import ModalForm from "../LeadForm/ModalForm";
 
-const Header = ({diseaseInfo}) => {
+const Header = ({ diseaseInfo }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleClose = () => setShowModal(false);
@@ -26,23 +26,32 @@ const Header = ({diseaseInfo}) => {
               </a>
               <div className="d-flex">
                 <div className="d-flex align-items-center">
-                  <a href="tel:+91 7997993400" className="wbtn d-md-block d-none">
+                  <a
+                    href={`tel:${diseaseInfo?.phone}`}
+                    className="wbtn d-md-block"
+                  >
                     {diseaseInfo?.phone}
                   </a>
                   &nbsp; &nbsp;
-
                   {/* Book an Appointment button */}
                   <button
                     onClick={handleShow} // Add the onClick event here
                     className="btn btn-oasis-submit d-md-block d-none" // Adjust the button styling as needed
-                    style={{ backgroundColor: "#FF0329", color: "white", padding: "8px 16px", borderRadius: "5px" }}
+                    style={{
+                      backgroundColor: "#FF0329",
+                      color: "white",
+                      padding: "8px 16px",
+                      borderRadius: "5px",
+                    }}
                   >
                     Book Appointment
                   </button>
-
                   {/* WhatsApp icon - Visible on mobile only */}
                   <a
-                    href={`https://api.whatsapp.com/send/?phone=7997993400&text&app_absent=0`}
+                    href={`https://api.whatsapp.com/send/?phone=${diseaseInfo?.phone.replace(
+                      "+91",
+                      ""
+                    )}&text&app_absent=0`}
                     className="whatsupchat d-block d-md-none"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -60,16 +69,15 @@ const Header = ({diseaseInfo}) => {
             </div>
           </nav>
         </header>
-        <Modal show={showModal} onHide={handleClose} style={{ zIndex: "99999" }}>
+        <Modal
+          show={showModal}
+          onHide={handleClose}
+          style={{ zIndex: "99999" }}
+        >
           <Modal.Header closeButton>
-            <h5 className="modal-title text-center" style={{ color: "#111" }}>
-              Book Appointment
-            </h5>
           </Modal.Header>
           <Modal.Body>
-            <ModalForm
-              service="ivf"
-            />
+            <ModalForm service="ivf" />
           </Modal.Body>
         </Modal>
       </div>

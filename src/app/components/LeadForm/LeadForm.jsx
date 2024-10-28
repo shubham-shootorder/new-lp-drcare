@@ -17,6 +17,7 @@ const LeadForm = ({}) => {
   }, []);
 
   const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
   const [gender, setGender] = useState(""); // Updated for text input
   const [age, setAge] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(true);
@@ -58,9 +59,8 @@ const LeadForm = ({}) => {
   
     // Fetch values from the form
     const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
     const mobile = document.getElementById("mobile").value;
-    const gender = document.getElementById("gender").value;
-    const age = document.getElementById("age").value;
     const city = document.getElementById("city").value;
     const healthProblem = document.getElementById("healthProblem").value;
   
@@ -79,7 +79,8 @@ const LeadForm = ({}) => {
     const data = {
       full_name: fullname,
       phone: mobile,
-      others: `gender is ${gender} and age is ${age}, health problem is ${healthProblem}`,
+      others: `health problem is ${healthProblem}`,
+      email: email,
       location: city,
       service: urlPath,
       utm_source: sourceUtm,
@@ -138,6 +139,18 @@ const LeadForm = ({}) => {
                 required
               />
             </div>
+            <div className="mb-3">
+              <input
+                placeholder="Email"
+                type="email"
+                className="form-control"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
 
             <div className="row mb-3">
               <div className="col-6">
@@ -168,35 +181,6 @@ const LeadForm = ({}) => {
                   onChange={(e) => setCity(e.target.value)}
                   required
                 />
-              </div>
-            </div>
-
-            <div className="mb-3">
-              <div className="row">
-                <div className="col">
-                  <input
-                    placeholder="Gender"
-                    type="text"
-                    className="form-control"
-                    id="gender"
-                    name="gender"
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="col">
-                  <input
-                    placeholder="Age"
-                    type="text"
-                    className="form-control"
-                    id="age"
-                    name="age"
-                    value={age}
-                    onChange={(e) => setAge(e.target.value)}
-                    required
-                  />
-                </div>
               </div>
             </div>
 

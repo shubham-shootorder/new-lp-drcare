@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import ModalForm from "../LeadForm/ModalForm";
 import Image from "next/image";
+import LeadForm from "../LeadForm/LeadForm";
 
 const FloatBottom = ({ center, referal, refId, testlp = false }) => {
   const [show, setShow] = useState(false);
@@ -24,13 +25,13 @@ const FloatBottom = ({ center, referal, refId, testlp = false }) => {
             <br /> APPOINTMENT
           </a>
         </button>
-        <button className="float-btm-text2">
+        {/* <button className="float-btm-text2">
           <a href={center?.phone}>
             <b>CALL US </b> NOW
             <br />
             {center?.phone.replace("tel:", "")}
           </a>
-        </button>
+        </button> */}
       </div>
 
       {/* WhatsApp Button */}
@@ -56,13 +57,7 @@ const FloatBottom = ({ center, referal, refId, testlp = false }) => {
           </h5>
         </Modal.Header>
         <Modal.Body>
-          <ModalForm
-            service="ivf"
-            phoneNumber={center?.phone}
-            centerName={center?.center_name}
-            referal={referal}
-            refId={refId}
-          />
+          <ModalForm/>
         </Modal.Body>
       </Modal>
 
