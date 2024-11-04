@@ -127,7 +127,7 @@ export default function Page({ params }) {
       <FAQsSection faqs={faqs} />
 
       {/* <FloatingButton /> */}
-      <FloatBottom />
+      <FloatBottom diseaseInfo={filteredDisease} />
       <Footer />
     </>
   );

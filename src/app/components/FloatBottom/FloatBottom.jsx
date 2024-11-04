@@ -6,7 +6,7 @@ import ModalForm from "../LeadForm/ModalForm";
 import Image from "next/image";
 import LeadForm from "../LeadForm/LeadForm";
 
-const FloatBottom = ({ center, referal, refId, testlp = false }) => {
+const FloatBottom = ({ diseaseInfo }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -25,13 +25,13 @@ const FloatBottom = ({ center, referal, refId, testlp = false }) => {
             <br /> APPOINTMENT
           </a>
         </button>
-        {/* <button className="float-btm-text2">
-          <a href={center?.phone}>
+        <button className="float-btm-text2">
+          <a href={`tel:${diseaseInfo?.phone}`}>
             <b>CALL US </b> NOW
             <br />
-            {center?.phone.replace("tel:", "")}
+            {/* {center?.phone.replace("tel:", "")} */}
           </a>
-        </button> */}
+        </button>
       </div>
 
       {/* WhatsApp Button */}

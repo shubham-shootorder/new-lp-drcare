@@ -25,7 +25,7 @@ const HeroSection = ({ diseaseInfo }) => {
   }, []);
 
   const getWordsPerLine = () => {
-    if (windowWidth < 576) return 2;
+    if (windowWidth < 576) return 3;
     if (windowWidth < 768) return 2;
     return 3;
   };
@@ -69,7 +69,7 @@ const HeroSection = ({ diseaseInfo }) => {
                 {/* Heading overlay */}
                 <div style={{
                   position: "absolute", 
-                  bottom: "-77%", 
+                  bottom: "-72%", 
                   left: "50%", 
                   transform: "translate(-50%, -50%)", 
                   textAlign: "center", 
