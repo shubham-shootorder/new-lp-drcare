@@ -48,10 +48,7 @@ const Header = ({ diseaseInfo }) => {
                   </button>
                   {/* WhatsApp icon - Visible on mobile only */}
                   <a
-                    href={`https://api.whatsapp.com/send/?phone=${diseaseInfo?.phone.replace(
-                      "+91",
-                      ""
-                    )}&text&app_absent=0`}
+                    href={`https://api.whatsapp.com/send/?phone=917093523813&text&app_absent=0`}
                     className="whatsupchat d-block d-md-none"
                     target="_blank"
                     rel="noopener noreferrer"

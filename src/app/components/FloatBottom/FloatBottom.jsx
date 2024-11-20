@@ -36,7 +36,7 @@ const FloatBottom = ({ diseaseInfo }) => {
 
       {/* WhatsApp Button */}
       <a
-        href="https://api.whatsapp.com/send/?phone=8019690003&text&app_absent=0"
+        href="https://api.whatsapp.com/send/?phone=7093523813&text&app_absent=0"
         className="whatsapp-chat"
         target="_blank"
         rel="noopener noreferrer"
