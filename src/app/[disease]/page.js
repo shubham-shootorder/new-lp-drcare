@@ -104,7 +104,7 @@ export default function Page({ params }) {
 
   return (
     <>
-      <Header />
+      <Header diseaseInfo={filteredDisease} />
       <HeroSection diseaseInfo={filteredDisease} />
       {/* Other sections can be added here as necessary */}
       <FertilitySection tabsDataPass={tabs} title={title} />
@@ -123,8 +123,8 @@ export default function Page({ params }) {
       {/* Pass the dynamic FAQs to the FAQsSection */}
       <FAQsSection faqs={faqs} />
 
-      <FloatingButton />
-      <FloatBottom />
+      {/* <FloatingButton /> */}
+      <FloatBottom diseaseInfo={filteredDisease} />
       <Footer />
     </>
   );

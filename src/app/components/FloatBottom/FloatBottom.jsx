@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import ModalForm from "../LeadForm/ModalForm";
 import Image from "next/image";
+import LeadForm from "../LeadForm/LeadForm";
 
-const FloatBottom = ({ center, referal, refId, testlp = false }) => {
+const FloatBottom = ({ diseaseInfo }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -25,17 +26,17 @@ const FloatBottom = ({ center, referal, refId, testlp = false }) => {
           </a>
         </button>
         <button className="float-btm-text2">
-          <a href={center?.phone}>
+          <a href={`tel:${diseaseInfo?.phone}`}>
             <b>CALL US </b> NOW
             <br />
-            {center?.phone.replace("tel:", "")}
+            {/* {center?.phone.replace("tel:", "")} */}
           </a>
         </button>
       </div>
 
       {/* WhatsApp Button */}
       <a
-        href="https://api.whatsapp.com/send/?phone=8019690003&text&app_absent=0"
+        href="https://api.whatsapp.com/send/?phone=7093523813&text&app_absent=0"
         className="whatsapp-chat"
         target="_blank"
         rel="noopener noreferrer"
@@ -56,13 +57,7 @@ const FloatBottom = ({ center, referal, refId, testlp = false }) => {
           </h5>
         </Modal.Header>
         <Modal.Body>
-          <ModalForm
-            service="ivf"
-            phoneNumber={center?.phone}
-            centerName={center?.center_name}
-            referal={referal}
-            refId={refId}
-          />
+          <ModalForm/>
         </Modal.Body>
       </Modal>
 

@@ -17,6 +17,7 @@ const LeadForm = ({}) => {
   }, []);
 
   const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
   const [gender, setGender] = useState(""); // Updated for text input
   const [age, setAge] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(true);
@@ -51,42 +52,64 @@ const LeadForm = ({}) => {
     }
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+  
+    // Fetch values from the form
     const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
     const mobile = document.getElementById("mobile").value;
-    const gender = document.getElementById("gender").value;
-    const age = document.getElementById("age").value;
+    const city = document.getElementById("city").value;
+    const healthProblem = document.getElementById("healthProblem").value;
+  
+    // Fetch UTM parameters from the URL
     const urlParams = new URLSearchParams(window.location.search);
-
-    let sourceUtm = urlParams.get("utm_source") || "";
-    let mediumUtm = urlParams.get("utm_medium") || "";
-    let campaignUtm = urlParams.get("utm_campaign") || "";
-    let contentUtm = urlParams.get("utm_content") || "";
-    let termUtm = urlParams.get("utm_term") || "";
-
+    const sourceUtm = urlParams.get("utm_source") || "";
+    const mediumUtm = urlParams.get("utm_medium") || "";
+    const campaignUtm = urlParams.get("utm_campaign") || "";
+    const contentUtm = urlParams.get("utm_content") || "";
+    const termUtm = urlParams.get("utm_term") || "";
+  
+    // Get the service from the URL path
+    const urlPath = window.location.pathname;
+  
+    // Prepare the data payload for the PHP API
+    const data = {
+      full_name: fullname,
+      phone: mobile,
+      others: `health problem is ${healthProblem}`,
+      email: email,
+      location: city,
+      service: urlPath,
+      utm_source: sourceUtm,
+      utm_medium: mediumUtm,
+      utm_campaign: campaignUtm,
+      utm_content: contentUtm,
+      utm_term: termUtm,
+    };
+  
     try {
-      const response = await axios.post("/api/data", {
-        full_name: fullname,
-        phone: mobile,
-        others: `gender is ${gender} and age is ${age} city is ${city} health problem is ${healthProblem}`,
-        service: urlPath,
-        utm_source: sourceUtm,
-        utm_medium: mediumUtm,
-        utm_campaign: campaignUtm,
-        utm_content: contentUtm,
-        utm_term: termUtm,
+      // Call the PHP API on your server
+      const response = await axios.post("https://drcarehomeopathy.in/lead_generation.php", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
-
+  
+      console.log("Response from PHP API:", response.data);
+  
       setIsSubmitting(false);
-      router.push("/thankyou");
+      router.push("/lp/thankyou");
     } catch (error) {
+      // Handle errors gracefully
       console.error("There was a problem with the form submission:", error);
       setIsSubmitting(false);
     }
   };
+  
+  
 
   return (
     <>
@@ -113,6 +136,18 @@ const LeadForm = ({}) => {
                 name="fullname"
                 value={fullname}
                 onChange={(e) => setFullname(e.target.value)}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                placeholder="Email"
+                type="email"
+                className="form-control"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -146,35 +181,6 @@ const LeadForm = ({}) => {
                   onChange={(e) => setCity(e.target.value)}
                   required
                 />
-              </div>
-            </div>
-
-            <div className="mb-3">
-              <div className="row">
-                <div className="col">
-                  <input
-                    placeholder="Gender"
-                    type="text"
-                    className="form-control"
-                    id="gender"
-                    name="gender"
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="col">
-                  <input
-                    placeholder="Age"
-                    type="text"
-                    className="form-control"
-                    id="age"
-                    name="age"
-                    value={age}
-                    onChange={(e) => setAge(e.target.value)}
-                    required
-                  />
-                </div>
               </div>
             </div>
 

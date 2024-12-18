@@ -25,7 +25,7 @@ const ThankyouComponent = () => {
               </a>
               <div className="d-flex">
                 <a
-                  href="https://api.whatsapp.com/send/?phone=917992979929&text&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=917093523813&text&app_absent=0"
                   className="whatsupchat"
                   target="blank"
                 >
@@ -45,7 +45,7 @@ const ThankyouComponent = () => {
           <div className="container">
             <h1 className="heading-text">THANK YOU.</h1>
             <p className="text-center text-black">
-              <b>Welcome to the journey towards parenthood.</b>
+              {/* <b>Welcome to the journey towards parenthood.</b> */}
             </p>
             <center>
               {" "}
