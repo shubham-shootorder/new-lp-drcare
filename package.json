@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.13.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "dstruct-js": "^1.0.1",
     "formidable": "^3.5.1",
     "next": "14.2.3",
     "node-fetch": "^3.3.2",

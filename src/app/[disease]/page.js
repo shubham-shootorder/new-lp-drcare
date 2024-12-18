@@ -14,9 +14,6 @@ import diseasesInfo from "@/data/diseaseInfo";
 import FertilitySection from "@/app/components/NewFertilitySection/FertilitySection";
 import { tabsData } from "@/data/tabsData";
 import testimonials from "@/testimonials";
-import IVFSpecialists from "../components/BestDoctors/IVFSpecialists";
-import BeforeAfter from "../components/beforeAfter/BeforeAfter";
-import { beforeAfter } from "@/data/before-after";
 import faqsData from "@/data/faqsData"; // Import the FAQs data
 
 
