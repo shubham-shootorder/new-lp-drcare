@@ -80,6 +80,26 @@ const diseasesInfo = [
     phone: "+919703001000",
     email: "spondylosis@drcarehospitals.com",
   },
+  {
+    slug: "polycystic-ovarian-disease-pcod",
+    heading: "Empower Your Health: Homeopathy for PCOD Relief",
+    content:
+      "Discover effective homeopathic remedies for low back pain that target the root causes and provide long-lasting relief without harsh medications.",
+    imageUrl: "/img/pcod-banner-desktop.jpg", // Replace with actual image URL
+    mobileImgUrl:"/img/pcod-banner-mobile.jpg",
+    phone: "+919703001000",
+    email: "spondylosis@drcarehospitals.com",
+  },
+  {
+    slug: "autism",
+    heading: "Unlocking Potential: A Holistic Approach to Autism Care",
+    content:
+      "Discover effective homeopathic remedies for low back pain that target the root causes and provide long-lasting relief without harsh medications.",
+    imageUrl: "/img/autism-desktop.jpg", // Replace with actual image URL
+    mobileImgUrl:"/img/autism-mobile.jpg",
+    phone: "+919703001000",
+    email: "spondylosis@drcarehospitals.com",
+  },
 ];
 
 export default diseasesInfo;

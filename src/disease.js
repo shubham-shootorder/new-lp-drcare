@@ -10,6 +10,8 @@ export const diseases = [
     { name: 'Rheumatoid Arthritis', slug: 'rheumatoid-arthritis' },
     { name: 'Diabetes Mellitus', slug: 'diabetes-mellitus' },
     { name: 'Arthritis', slug: 'arthritis' },
-    { name: 'Kidney Stones', slug: 'kidney-stones' }
+    { name: 'Kidney Stones', slug: 'kidney-stones' },
+    { name: 'polycystic-ovarian-disease-pcod',slug:'polycystic-ovarian-disease-pcod'},
+    { name: 'autism',slug:'autism'}
   ];
  

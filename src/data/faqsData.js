@@ -410,6 +410,34 @@ const faqsData = {
         "Yes, one can get pregnant with piles. However, there is a high chance that the symptoms may worsen, especially in the third trimester. Our homeopathic doctors for piles will help mothers who want to conceive and have issues with piles with personalized treatment and medicines that do not have any side effects.",
     },
   ],
+  "polycystic-ovarian-disease-pcod":[
+    {
+      question: "What are the first signs of PCOD?",
+      answer:
+        "The first signs include: Irregular periods/no periods Excessive hair growth Weight gain Hair Loss Oily Skin or Acne Difficulty in getting pregnant.",
+    },
+    {
+      question: "Can Homeopathy treat PCOD? ",
+      answer:
+        "Homeopathy is a great option for PCOS because it provides long-lasting relief from the problem. Homeopathy targets and heals the disease's underlying cause rather than concentrating on its symptoms. Homeopathy provides a more dependable form of treatment as a result.",
+    },
+    {
+      question: "Can PCOS create a problem for pregnancy?",
+      answer:
+        "One of the most prevalent but manageable factors of infertility in women is PCOS. The hormonal imbalance in PCOS patients hinders the ovaries from producing eggs and releasing them (ovulation). Pregnancy is impossible if ovulation doesn't occur.",
+    },
+    {
+      question: "Is PCOD hereditary?",
+      answer:
+        "You are more likely to acquire PCOS if it runs in your family. Although particular genes linked to PCOS have not yet been discovered, this shows that the disorder may have a hereditary component.",
+    },
+    {
+      question: "What are the health risks associated with PCOD?",
+      answer:
+        "Certain significant health issues are more likely to affect women with PCOS. These include uterine cancer, high blood pressure, heart and blood vessel issues, and type 2 diabetes. Having trouble getting pregnant is a common issue for women with PCOS (fertility)",
+    },
+
+  ]
   // Add FAQs for other diseases similarly
 };
 

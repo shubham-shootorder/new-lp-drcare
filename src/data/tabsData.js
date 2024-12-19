@@ -1394,4 +1394,295 @@ export const tabsData = {
       },
     ],
   },
+  "polycystic-ovarian-disease-pcod" : {
+    url: "polycystic-ovarian-disease-pcod",
+    eventKey: "infertility-testing",
+    title: "Polycystic Ovarian Disease (PCOD)",
+    tabs: [
+      {
+        eventKey: "different",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy offers a holistic and personalized approach to managing PCOD by focusing on the root cause of hormonal imbalance. It emphasizes natural remedies to restore health and improve overall well-being without side effects. This system of medicine addresses the unique constitution of each patient, providing tailored treatments to promote long-term recovery.",
+          },
+        ],
+      },
+      {
+        eventKey: "infertility-testing",
+        title: "Overview",
+        content: [
+          {
+            imageSrc: "/img/pcod-overview.jpg",
+            title: "What is PCOD?",
+            desc: (
+              <>
+                Polycystic Ovarian Disease (PCOD) is a common hormonal disorder
+                among women of reproductive age, characterized by irregular
+                menstrual cycles, multiple cysts in the ovaries, and elevated
+                levels of male hormones. At Dr. Care Homeopathic Clinic, we
+                provide effective and natural treatment for PCOD through
+                homeopathy, focusing on restoring hormonal balance and overall
+                health. With over 20+ years of expertise, our specialists have
+                successfully treated thousands of PCOD cases with a high success
+                rate, ensuring safe and side-effect-free recovery.
+              </>
+            ),
+          },
+        ],
+      },
+      {
+        eventKey: "infertility-treatments",
+        title: "Symptoms & Stages",
+        content: [
+          {
+            imageSrc: "",
+            title: "Common Symptoms of PCOD",
+            desc: (
+              <>
+                <ul>
+                  <li>Irregular or missed menstrual cycles</li>
+                  <li>Excessive hair growth (hirsutism), especially on the face and body</li>
+                  <li>Weight gain and difficulty losing weight</li>
+                  <li>Acne and oily skin</li>
+                  <li>Hair thinning or male-pattern baldness</li>
+                  <li>Difficulty conceiving or infertility</li>
+                </ul>
+              </>
+            ),
+          },
+          {
+            imageSrc: "",
+            title: "Stages of PCOD",
+            desc: (
+              <>
+                <ul>
+                  <li>
+                    <strong>Early Stage:</strong> Symptoms like irregular periods and mild hormonal imbalances begin to appear.
+                  </li>
+                  <li>
+                    <strong>Moderate Stage:</strong> Symptoms become more pronounced, including weight gain and visible skin changes like acne.
+                  </li>
+                  <li>
+                    <strong>Advanced Stage:</strong> Severe complications such as insulin resistance, type 2 diabetes, or infertility may arise.
+                  </li>
+                </ul>
+              </>
+            ),
+          },
+        ],
+      },
+      {
+        eventKey: "advanced-treatments",
+        title: "Causes & Risk Factors",
+        content: [
+          {
+            imageSrc: "",
+            title: "Causes of PCOD",
+            desc: (
+              <>
+                <ul>
+                  <li>Genetic predisposition</li>
+                  <li>Hormonal imbalances, including high levels of androgens</li>
+                  <li>Insulin resistance leading to excessive androgen production</li>
+                  <li>Inflammation contributing to ovarian dysfunction</li>
+                </ul>
+              </>
+            ),
+          },
+          {
+            imageSrc: "",
+            title: "Risk Factors",
+            desc: (
+              <>
+                <ul>
+                  <li>Family history of PCOD or diabetes</li>
+                  <li>Obesity or significant weight gain</li>
+                  <li>Sedentary lifestyle</li>
+                  <li>Poor dietary habits</li>
+                </ul>
+              </>
+            ),
+          },
+        ],
+      },
+    ],
+    carousel: [
+      {
+        imageSrc: "/img/icons/Clinical-Excellence-01-01-01-1.png",
+        alt: "Comprehensive PCOD Management",
+        title: "Comprehensive Management",
+        text: "Dr. Care Homeopathy provides personalized treatments for PCOD, including lifestyle changes, dietary guidance, and homeopathic remedies to effectively manage symptoms and improve overall health.",
+      },
+      {
+        imageSrc: "/img/icons/Clinical-Excellence-01-01-01-2.png",
+        alt: "Natural Treatment Approach",
+        title: "Natural Treatment Approach",
+        text: "Unlike conventional treatments, homeopathy addresses the root causes of PCOD without side effects, promoting hormonal balance and long-term recovery.",
+      },
+      {
+        imageSrc: "/img/icons/Clinical-Excellence-01-01-01-3.png",
+        alt: "Expert Homeopathy Team",
+        title: "Expert Homeopathy Team",
+        text: "Our team of experienced homeopathic doctors specializes in treating PCOD holistically, helping patients achieve significant improvements in their condition.",
+      },
+      {
+        imageSrc: "/img/icons/Clinical-Excellence-01-01-01-4.png",
+        alt: "Contact Us for PCOD Treatment",
+        title: "Contact Us",
+        text: "For more information about our PCOD treatments, please call us at <strong>7997993400</strong>. Start your journey to better health with Dr. Care Homeopathy today.",
+      },
+    ],
+  },
+  "autism": {
+    url: "autism-treatment",
+    eventKey: "autism-overview",
+    title: "Autism Spectrum Disorder (ASD)",
+    tabs: [
+      {
+        eventKey: "why-homeopathy",
+        title: "Why Homeopathy",
+        content: [
+          {
+            imageSrc: "/img/homeopathy.png",
+            title: "",
+            desc: "Homeopathy provides a safe and effective way to manage Autism Spectrum Disorder (ASD) by addressing the child's emotional, mental, and physical symptoms holistically. It focuses on personalized treatments based on the child's unique constitution, promoting long-term improvements and enhancing overall quality of life.",
+          },
+        ],
+      },
+      {
+        eventKey: "autism-overview",
+        title: "Overview",
+        content: [
+          {
+            imageSrc: "/img/autism-overview.jpg",
+            title: "What is Autism?",
+            desc: (
+              <>
+                Autism, or Autism Spectrum Disorder (ASD), is a developmental
+                disorder characterized by challenges in social interaction,
+                communication, and restricted or repetitive behaviors. Symptoms
+                typically begin as early as six months but are usually
+                noticeable by the age of two or three. Boys are more frequently
+                affected than girls. At Dr. Care Homeopathic Clinic, we provide
+                specialized treatments for autism through homeopathy, aiming to
+                improve the child&apos;s behavioral and emotional development
+                effectively and naturally.
+              </>
+            ),
+          },
+        ],
+      },
+      {
+        eventKey: "symptoms-and-stages",
+        title: "Symptoms & Behavioral Traits",
+        content: [
+          {
+            imageSrc: "",
+            title: "Common Symptoms of Autism",
+            desc: (
+              <>
+                <ul>
+                  <li>Lack of eye contact while communicating</li>
+                  <li>Difficulty understanding emotions of others</li>
+                  <li>Resistance to change in routines</li>
+                  <li>Repetitive behaviors like hand-flapping or rocking</li>
+                  <li>Delayed or impaired speech development</li>
+                  <li>Unusual reactions to lights, sounds, or textures</li>
+                  <li>Strong attachment to specific objects</li>
+                  <li>Hyperactivity or unusual calmness</li>
+                </ul>
+              </>
+            ),
+          },
+          {
+            imageSrc: "",
+            title: "Stages of Autism",
+            desc: (
+              <>
+                <ul>
+                  <li>
+                    <strong>Mild:</strong> Subtle symptoms like limited social
+                    interactions and repetitive behaviors.
+                  </li>
+                  <li>
+                    <strong>Moderate:</strong> Noticeable speech delays and
+                    difficulty managing emotions.
+                  </li>
+                  <li>
+                    <strong>Severe:</strong> Significant communication barriers
+                    and high dependence on caregivers.
+                  </li>
+                </ul>
+              </>
+            ),
+          },
+        ],
+      },
+      {
+        eventKey: "causes-and-risk-factors",
+        title: "Causes & Risk Factors",
+        content: [
+          {
+            imageSrc: "",
+            title: "Potential Causes of Autism",
+            desc: (
+              <>
+                <ul>
+                  <li>Genetic predisposition</li>
+                  <li>Exposure to certain viral infections during pregnancy</li>
+                  <li>Heavy metal exposure</li>
+                  <li>Advanced parental age</li>
+                  <li>Emotional stress during pregnancy</li>
+                  <li>Smoking or drinking during pregnancy</li>
+                </ul>
+              </>
+            ),
+          },
+          {
+            imageSrc: "",
+            title: "Risk Factors",
+            desc: (
+              <>
+                <ul>
+                  <li>Family history of autism or related conditions</li>
+                  <li>Environmental factors during prenatal development</li>
+                  <li>Premature birth or low birth weight</li>
+                </ul>
+              </>
+            ),
+          },
+        ],
+      },
+    ],
+    carousel: [
+      {
+        imageSrc: "/img/icons/Clinical-Excellence-01-01-01-1.png",
+        alt: "Comprehensive Autism Management",
+        title: "Comprehensive Management",
+        text: "Dr. Care Homeopathy provides personalized treatments for autism, emphasizing behavioral improvements and emotional well-being.",
+      },
+      {
+        imageSrc: "/img/icons/Clinical-Excellence-01-01-01-2.png",
+        alt: "Natural Treatment Approach",
+        title: "Natural Treatment Approach",
+        text: "Homeopathy focuses on the root causes of autism, offering safe, side-effect-free solutions for long-term progress.",
+      },
+      {
+        imageSrc: "/img/icons/Clinical-Excellence-01-01-01-3.png",
+        alt: "Expert Homeopathy Team",
+        title: "Expert Homeopathy Team",
+        text: "Our skilled team specializes in treating autism holistically, delivering noticeable improvements in quality of life.",
+      },
+      {
+        imageSrc: "/img/icons/Clinical-Excellence-01-01-01-4.png",
+        alt: "Contact Us for Autism Treatment",
+        title: "Contact Us",
+        text: "For more information about our autism treatments, please call us at <strong>7997993400</strong>. Let us help you today.",
+      },
+    ],
+  },
+
 };

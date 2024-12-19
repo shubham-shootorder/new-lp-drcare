@@ -65,6 +65,14 @@ const diseases = [
       description: "Effective homeopathic solutions for chronic low back pain.",
       backgroundImage: "/img/low-back-pain-banner.jpg",
     },
+    {
+      id: "9",
+      disease_slug: "polycystic-ovarian-disease-pcod",
+      disease_name: "Low Back Pain (Spondylosis)",
+      heading: "Say Goodbye to Low Back Pain with Homeopathy - (SPONDYLOSIS)",
+      description: "Effective homeopathic solutions for chronic low back pain.",
+      backgroundImage: "/img/low-back-pain-banner.jpg",
+    },
     // Add more diseases as needed
   ];
   
